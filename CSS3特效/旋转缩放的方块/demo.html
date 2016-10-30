@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>内旋转的方块</title>
+    <style>
+    html,
+    body {
+        height: 100%;
+        overflow: hidden;
+        margin: 0;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #222226;
+    }
+
+    div {
+        width: 80vmin;
+        height: 80vmin;
+        text-align: center;
+        overflow: hidden;
+        background: hsla(267, 55%, 57%, 0.1);
+    }
+
+    div>div {
+        width: 100%;
+        height: 100%;
+        animation: a 8s linear infinite;
+    }
+
+    @keyframes a {
+        0% {
+            transform: scale(1) rotate(0);
+        }
+        6.25% {
+            transform: scale(.915) rotate(5.625deg);
+        }
+        12.5% {
+            transform: scale(.85) rotate(11.25deg);
+        }
+        18.75% {
+            transform: scale(.8) rotate(16.875deg);
+        }
+        25% {
+            transform: scale(.765) rotate(22.5deg);
+        }
+        31.25% {
+            transform: scale(.74) rotate(28.125deg);
+        }
+        37.5% {
+            transform: scale(.72) rotate(33.75deg);
+        }
+        43.75% {
+            transform: scale(.71) rotate(39.375deg);
+        }
+        50% {
+            transform: scale(.708) rotate(45deg);
+        }
+        56.25% {
+            transform: scale(.71) rotate(50.625deg);
+        }
+        62.5% {
+            transform: scale(.72) rotate(56.25deg);
+        }
+        68.75% {
+            transform: scale(.74) rotate(61.875deg);
+        }
+        75% {
+            transform: scale(.765) rotate(67.5deg);
+        }
+        81.25% {
+            transform: scale(.8) rotate(73.125deg);
+        }
+        87.5% {
+            transform: scale(.85) rotate(78.75deg);
+        }
+        93.75% {
+            transform: scale(.915) rotate(84.375deg);
+        }
+        100% {
+            transform: scale(1) rotate(90deg);
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div>I Love You !
+        <div>I Love You !
+            <div>I Love You !
+                <div>I Love You !
+                    <div>I Love You !
+                        <div>I Love You !
+                            <div>I Love You !
+                                <div>I Love You !
+                                    <div>I Love You !
+                                        <div>I Love You !</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
