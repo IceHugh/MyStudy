@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>百分比加载</title>
+</head>
+
+<body>
+    <canvas id="canvas" width="500" height="500" style="background: #000;margin: 10% 30%;"></canvas>
+    <script>
+    window.onload = function() {
+        var canvas = document.getElementById("canvas"),
+            cxt = canvas.getContext('2d'),
+            centerX = canvas.width / 2,
+            centerY = canvas.height / 2,
+            rad = Math.PI * 2 / 100,
+            speed = .1;
+
+        function blueCircle(n) {
+            cxt.save();
+            cxt.beginPath();
+            cxt.strokeStyle = "#49f";
+            cxt.lineWidth = 5;
+            cxt.arc(centerX, centerY, 100, Math.PI * 1.5, Math.PI * 1.5 + n * rad, false);
+            cxt.stroke();
+            cxt.closePath();
+            cxt.restore();
+        }
+
+        function whiteCircle() {
+            cxt.save();
+            cxt.beginPath();
+            cxt.strokeStyle = "#fff";
+            cxt.lineWidth = 1;
+            cxt.arc(centerX, centerY, 100, 0, Math.PI * 2, false);
+            cxt.stroke();
+            cxt.closePath();
+            cxt.restore();
+        }
+
+        function text(n) {
+            cxt.save();
+            cxt.strokeStyle = "#49f";
+            cxt.font = "40px Arial";
+            cxt.textAlign = "center";
+            cxt.textBaseAlign = "middle";
+            cxt.beginPath();
+            cxt.strokeText(n.toFixed(0) + "%", centerX, centerY);
+            cxt.stroke();
+            cxt.closePath();
+            cxt.restore();
+        }
+        (function drawFrame() {
+
+            window.requestAnimationFrame(drawFrame, canvas);
+            cxt.clearRect(0, 0, canvas.width, canvas.height);
+            whiteCircle();
+            blueCircle(speed);
+            text(speed);
+            if (speed > 100) speed = 0;
+            speed += .1;
+        }())
+    }
+    </script>
+</body>
+
+</html>
