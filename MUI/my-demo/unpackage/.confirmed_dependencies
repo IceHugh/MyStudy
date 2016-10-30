@@ -1,0 +1,117 @@
+{
+  "partpage/xingfu.html": {
+    "href": "partpage/xingfu.html",
+    "resources": [
+      "css/mui.min.css",
+      "js/mui.min.js",
+      "js/mui.zoom.js",
+      "js/mui.previewimage.js",
+      "images/1.jpg",
+      "images/2.jpg"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "home.html": {
+    "href": "home.html",
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "js/list_data.json",
+      "images/4.jpg",
+      "images/1.jpg",
+      "images/2.jpg",
+      "images/3.jpg"
+    ],
+    "refer": [
+      "partpage/xingfu.html"
+    ],
+    "priority": 0
+  },
+  "logout.html": {
+    "href": "logout.html",
+    "resources": [
+      "css/mui.min.css",
+      "js/mui.min.js",
+      "images/con-5.jpg"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "contacts.html": {
+    "href": "contacts.html",
+    "resources": [
+      "css/mui.min.css",
+      "css/mui.indexedlist.css",
+      "js/mui.min.js",
+      "js/jq2.1.0.min.js",
+      "js/contact.js",
+      "js/contact.json",
+      "js/mui.indexedlist.js"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "discover.html": {
+    "href": "discover.html",
+    "resources": [
+      "css/mui.min.css",
+      "css/iconfont.css",
+      "js/mui.min.js",
+      "images/6.jpg"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "reg.html": {
+    "href": "reg.html",
+    "resources": [
+      "css/mui.min.css",
+      "css/style.css",
+      "js/mui.min.js",
+      "js/app.js"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "personal.html": {
+    "href": "personal.html",
+    "resources": [
+      "css/mui.min.css",
+      "js/mui.min.js",
+      "js/mui.enterfocus.js",
+      "js/app.js"
+    ],
+    "refer": [
+      "logout.html",
+      "reg.html"
+    ],
+    "priority": 0
+  },
+  "menu.html": {
+    "href": "menu.html",
+    "resources": [
+      "css/mui.min.css",
+      "js/mui.min.js"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "index.html": {
+    "href": "index.html",
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "css/iconfont.css"
+    ],
+    "refer": [
+      "home.html",
+      "logout.html",
+      "contacts.html",
+      "discover.html",
+      "personal.html",
+      "menu.html"
+    ],
+    "priority": 0
+  }
+}

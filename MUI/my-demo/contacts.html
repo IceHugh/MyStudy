@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/mui.indexedlist.css" rel="stylesheet" />
+		<style>
+			html,
+			body {
+				height: 100%;
+				overflow: hidden;
+			}
+			
+			.mui-bar {
+				-webkit-box-shadow: none;
+				box-shadow: none;
+			}
+			
+			.mui-bar-nav~ .mui-content {
+				padding-top: 0;
+				height: 100%;
+			}
+			
+			.mui-table-view-cell img {
+				display: block;
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				float: left;
+				margin-right: 10px;
+			}
+			
+			.mui-table-view-cell .name {
+				width: 230px;
+				color: #000;
+				font-size: 24px;
+				margin-bottom: 5px;
+			}
+			
+			.mui-table-view-cell .name span {
+				float: right;
+				color: #8f8f94;
+				font-size: 14px;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="mui-content">
+			<div id='list' class="mui-indexed-list">
+				<div class="mui-indexed-list-search mui-input-row mui-search">
+					<input type="search" class="mui-input-clear mui-indexed-list-search-input" placeholder="搜索联系人">
+				</div>
+				<div class="mui-indexed-list-bar">
+					<a>A</a>
+					<a>B</a>
+					<a>C</a>
+					<a>D</a>
+					<a>E</a>
+					<a>F</a>
+					<a>G</a>
+					<a>H</a>
+					<a>I</a>
+					<a>J</a>
+					<a>K</a>
+					<a>L</a>
+					<a>M</a>
+					<a>N</a>
+					<a>O</a>
+					<a>P</a>
+					<a>Q</a>
+					<a>R</a>
+					<a>S</a>
+					<a>T</a>
+					<a>U</a>
+					<a>V</a>
+					<a>W</a>
+					<a>X</a>
+					<a>Y</a>
+					<a>Z</a>
+				</div>
+				<div class="mui-indexed-list-alert"></div>
+				<div class="mui-indexed-list-inner">
+					<div class="mui-indexed-list-empty-alert">没有数据</div>
+					<ul id="contact-detail" class="mui-table-view">
+					</ul>
+				</div>
+			</div>
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script src="js/jq2.1.0.min.js"></script>
+		<script src="js/contact.js"></script>
+		<script src="js/mui.indexedlist.js"></script>
+		<script>
+		mui.plusReady(function(){
+			mui.init();
+			mui.ready(function() {
+				var list = document.getElementById('list');
+				//calc hieght
+				list.style.height = document.body.offsetHeight + 'px';
+				//create
+				window.indexedList = new mui.IndexedList(list);
+			});
+		})
+		</script>
+	</body>
+
+</html>

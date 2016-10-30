@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/mui.min.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<style>
+			.mui-bar-tab {
+				height: 55px;
+			}
+			
+			.mui-bar .icon-yonghuzhongxin {
+				font-size: 22px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-icon mui-action-menu mui-icon-bars mui-pull-left" href="#offCanvasSide"></a>
+			<h1 class="mui-title">首页</h1>
+		</header>
+		<nav class="mui-bar mui-bar-tab">
+			<a id="home" class="mui-tab-item mui-active">
+				<span class="mui-icon mui-icon-home"></span>
+				<span class="mui-tab-label">首页</span>
+			</a>
+			<a id="contacts" class="mui-tab-item">
+				<span class="mui-icon iconfont icon-tongxunlu"></span>
+				<span class="mui-tab-label">通讯录</span>
+			</a>
+			<a id="discover" class="mui-tab-item">
+				<span class="mui-icon mui-icon-pengyouquan"></span>
+				<span class="mui-tab-label">朋友圈</span>
+			</a>
+			<a id="personal" class="mui-tab-item">
+				<span class="mui-icon iconfont icon-yonghuzhongxin"></span>
+				<span class="mui-tab-label">用户中心</span>
+			</a>
+		</nav>
+		<script type="text/javascript" charset="utf-8">
+			var menu = null,
+				main = null;
+			var showMenu = false;
+			mui.init({
+				swipeBack: false,
+				statusBarBackground: '#f7f7f7',
+				gestureConfig: {
+					doubletap: true
+				},
+				subpages: [{
+					id: 'home',
+					url: 'home.html',
+					styles: {
+						top: '45px',
+						bottom: '50px'
+					}
+				}]
+			});
+			mui.plusReady(function() {
+				mui.toast('提示：上拉加载更多，点击幸福跳转到幸福详情页')
+				main = plus.webview.currentWebview();
+				contact = plus.webview.create('contacts.html', 'contacts', {
+					top: '45px',
+					bottom: '50px'
+				});
+				discover = plus.webview.create('discover.html', 'discover', {
+					top: '45px',
+					bottom: '50px'
+				});
+				personal = plus.webview.create('personal.html', 'personal', {
+					top: '45px',
+					bottom: '50px'
+				});
+				logout = plus.webview.create('logout.html', 'logout', {
+					top: '45px',
+					bottom: '50px'
+				});
+				main.append(contact);
+				main.append(discover);
+				main.append(personal);
+				main.append(logout);
+				contact.hide();
+				discover.hide();
+				personal.hide();
+				logout.hide();
+				plus.screen.lockOrientation("portrait-primary");
+				main.addEventListener('maskClick', closeMenu);
+				//处理侧滑导航，为了避免和子页面初始化等竞争资源，延迟加载侧滑页面；
+				setTimeout(function() {
+					menu = mui.preload({
+						id: 'menu',
+						url: 'menu.html',
+						styles: {
+							left: 0,
+							width: '70%',
+							zindex: -1
+						},
+						show: {
+							aniShow: 'none'
+						}
+					});
+				}, 200);
+			});
+			var isInTransition = false;
+			/**
+			 * 显示侧滑菜单
+			 */
+			function openMenu() {
+				if(isInTransition) {
+					return;
+				}
+				if(!showMenu) {
+					//侧滑菜单处于隐藏状态，则立即显示出来；
+					isInTransition = true;
+					menu.setStyle({
+						mask: 'rgba(0,0,0,0)'
+					}); //menu设置透明遮罩防止点击
+					mui.toast('提示：点击回到相应项')
+					menu.show('none', 0, function() {
+						//主窗体开始侧滑并显示遮罩
+						main.setStyle({
+							mask: 'rgba(0,0,0,0.4)',
+							left: '70%',
+							transition: {
+								duration: 150
+							}
+						});
+						mui.later(function() {
+							isInTransition = false;
+							menu.setStyle({
+								mask: "none"
+							}); //移除menu的mask
+						}, 160);
+						showMenu = true;
+					});
+				}
+			};
+			/**
+			 * 关闭菜单
+			 */
+			function closeMenu() {
+				if(isInTransition) {
+					return;
+				}
+				if(showMenu) {
+					//关闭遮罩；
+					//主窗体开始侧滑；
+					isInTransition = true;
+					main.setStyle({
+						mask: 'none',
+						left: '0',
+						transition: {
+							duration: 200
+						}
+					});
+					showMenu = false;
+					//等动画结束后，隐藏菜单webview，节省资源；
+					mui.later(function() {
+						isInTransition = false;
+						menu.hide();
+					}, 300);
+				}
+			};
+			//点击左上角侧滑图标，打开侧滑菜单；
+			document.querySelector('.mui-icon-bars').addEventListener('tap', function(e) {
+				if(showMenu) {
+					closeMenu();
+				} else {
+					openMenu();
+				}
+			});
+			//敲击顶部导航，内容区回到顶部
+			document.querySelector('header').addEventListener('doubletap', function() {
+				main.children()[0].evalJS('mui.scrollTo(0, 100)');
+			});
+			//主界面向右滑动，若菜单未显示，则显示菜单；否则不做任何操作
+			window.addEventListener("swiperight", openMenu);
+			//主界面向左滑动，若菜单已显示，则关闭菜单；否则，不做任何操作；
+			window.addEventListener("swipeleft", closeMenu);
+			//侧滑菜单触发关闭菜单命令
+			window.addEventListener("menu:close", closeMenu);
+			window.addEventListener("menu:open", openMenu);
+			//重写mui.menu方法，Android版本menu按键按下可自动打开、关闭侧滑菜单；
+			mui.menu = function() {
+				if(showMenu) {
+					closeMenu();
+				} else {
+					openMenu();
+				}
+			}
+
+			var aTab = mui(".mui-tab-item");
+			mui.each(aTab, function(index, element) {
+				this.addEventListener("tap", function() {
+					var status = JSON.parse(localStorage.getItem('Lstatus'));
+					var id = this.getAttribute("id");
+					var title = this.querySelector('.mui-tab-label').innerHTML;
+					plus.webview.show(id);
+					mui('h1.mui-title')[0].innerHTML = title;
+					console.log(status)
+					if(id === "contacts"){
+						mui.toast('提示：联系人AJAX创建，可通过搜索框搜索')
+					}else if(id === "discover"){
+						mui.toast('提示：上拉刷新、下拉加载、双击标题回到顶部')
+					}
+					if(id === "personal") {
+						console.log(status)
+						if(status) {
+							plus.webview.show(logout);
+							mui('h1.mui-title')[0].innerHTML = title;
+						} else {
+							plus.webview.show(id);
+							mui.toast('提示：注册账号，登录之后可保存登录状态')
+							mui('h1.mui-title')[0].innerHTML = "登录";
+						}
+					} else {
+						plus.webview.show(id);
+						mui('h1.mui-title')[0].innerHTML = title;
+					}
+				})
+
+			});
+			window.addEventListener("openId", function(event) {
+				var mId = event.detail.id;
+				var target = document.getElementById(mId);
+				mui.trigger(target, 'tap')
+					//切换选项卡高亮
+				var current = document.querySelector(".mui-bar-tab>.mui-tab-item.mui-active");
+				if (target !== current) {
+					current.classList.remove('mui-active');
+					target.classList.add('mui-active');
+				}
+//				plus.webview.show(mId);
+			});
+
+			function openLog() {
+				mui.fire(plus.webview.getWebviewById('personal'), "openLogout");
+			}
+			//朋友圈刷新
+			var contentWebview = null;
+			document.querySelector('header').addEventListener('doubletap', function() {
+				var currentTitle = document.querySelector('.mui-title').innerHTML
+				if(currentTitle === "朋友圈") {
+					console.log(1)
+					if(contentWebview == null) {
+						contentWebview = plus.webview.getWebviewById("discover")
+					}
+					contentWebview.evalJS("mui('#pullrefresh').pullRefresh().scrollTo(0,0,100)");
+				}
+			});
+			
+		</script>
+	</body>
+
+</html>
