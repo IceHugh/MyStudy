@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--Author:ygz
+      Date:2016/8/3
+  -->
+  <meta charset="UTF-8">
+  <title>编写正则表达式</title>
+</head>
+<body>
+<input type="text" id="eml">
+<button onclick="onClick()">检查</button>
+<script>
+  function onClick(){
+    var emlreg = /^[1-9][0-9]{5}$/;
+    var phnreg = /^1[34578]\d{9}/;
+    var ymdreg = /[0-9]{4}\-[01][0-9]\-[0123][0-9]/;
+    var ymd = "2016-09-03";
+    console.log(ymdreg.test(ymd))
+  }
+
+</script>
+</body>
+</html>

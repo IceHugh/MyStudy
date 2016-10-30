@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--Author:ygz
+    Date:2016/7/28
+-->
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<input type="text" id="num1">
+<select name="operator" id="operator">
+  <option>+</option>
+  <option>-</option>
+  <option>*</option>
+  <option>/</option>
+</select>
+<input type="text" id="num2">
+<button onclick="onClick()">=</button>
+<input type="text" id="sum">
+<script>
+  function onClick() {
+    function calc() {
+      var num1 = document.getElementById('num1').value;
+      var num2 = document.getElementById('num2').value;
+      var operator = document.getElementById('operator').value;
+      if (isNaN(num1 * 1) && isNaN(num2 * 1)) {
+        alert("请输入数字");
+      } else {
+        switch (operator) {
+          case "+":
+            return (parseInt(num1) + parseInt(num2));
+          case "-":
+            return (parseInt(num1) - parseInt(num2));
+          case "*":
+            return parseInt(num1) * parseInt(num2);
+          case "/":
+            return parseInt(num1) / parseInt(num2);
+        }
+      }
+    }
+
+    var ss = calc();
+    document.getElementById('sum').value = ss;
+  }
+</script>
+</body>
+</html>

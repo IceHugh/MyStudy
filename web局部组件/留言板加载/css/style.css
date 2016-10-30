@@ -1,0 +1,74 @@
+*{margin: 0; padding:0; box-sizing: border-box}
+#message{
+  width: 1000px;
+  margin: 10px auto;
+  padding: 10px 20px 0 20px;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  min-height: 567px;
+}
+#message dl{
+  margin-top: 10px;
+  border-bottom: 1px solid #000;
+}
+#message dl:last-of-type{
+  border-bottom: none;
+}
+#message dt{
+  width: 100px;
+  height: 60px;
+  font-size: 0;
+  float: left;
+  overflow: hidden;
+}
+#message dt img{
+  width: 100px;
+  display: block;
+}
+#message dd:nth-of-type(1){
+  font-weight: 600;
+  line-height: 2em;
+}
+#message dd:nth-of-type(2){
+  line-height: 2em;
+}
+#message dd:nth-of-type(3){
+  clear: left;
+  line-height: 2em;
+}
+#message dd:nth-of-type(4){
+  text-align: right;
+  line-height: 2em;
+  color: red;
+}
+#tabWrap {
+  width:1000px;
+  margin: 0 auto;
+  padding: 0 102px;
+  border: 1px solid #000;
+}
+#tabWrap img{
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 0 5px;
+}
+#tab {
+  display: inline-block;
+  width:600px;
+  list-style: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#tab li{
+  display: inline;
+  margin: 0 5px;
+  line-height: 30px;
+  text-align: center;
+}
+#tab li:hover {
+  cursor: pointer;
+  background: #ccc;
+  color: red;
+}

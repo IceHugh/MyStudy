@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>上下无缝切换</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    ul,
+    ol {
+        list-style: none;
+    }
+
+    ul li img {
+        width: 100%;
+    }
+
+    #box {
+        position: relative;
+        height: 600px;
+        overflow: hidden;
+    }
+
+    #ul {
+        position: absolute;
+        width: 100%;
+    }
+
+    #ul li {
+        height: 600px;
+        overflow: hidden;
+    }
+
+    #ol {
+        position: absolute;
+        z-index: 999;
+        top: 90%;
+        left: 50%;
+        margin-left: -75px;
+    }
+
+    #ol li {
+        float: left;
+        margin: 0 5px;
+        width: 20px;
+        line-height: 20px;
+        text-align: center;
+        border-radius: 50%;
+        background: #fff;
+        cursor: pointer;
+        color: #000;
+    }
+
+    #ol .active {
+        background: red;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <ul id="ul">
+            <li><img src="images/images1.jpg" alt=""></li>
+            <li><img src="images/images2.jpg" alt=""></li>
+            <li><img src="images/images3.jpg" alt=""></li>
+            <li><img src="images/images4.jpg" alt=""></li>
+            <li><img src="images/images5.jpg" alt=""></li>
+        </ul>
+        <ol id='ol'>
+            <li class='active'>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ol>
+    </div>
+    <script src="js/move.js"></script>
+    <!-- <script src="js/carousel3.js"></script> -->
+    <script src="js/carousel4.js"></script>
+</body>
+
+</html>

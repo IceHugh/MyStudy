@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--Author:ygz
+    Date:2016/7/26
+-->
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script>
+    var a = 3;
+    var b = 1/*document.getElementById("b").value*/;
+    var c = 9/*document.getElementById("c").value*/;
+    var t;
+    var x;
+  /*  function onSort(){
+      var t;
+      if(a>b){
+        t=a;
+        a=b;
+        b=t;
+      }
+      if(a>c){
+        t=a;
+        a=c;
+        c=t;
+      }
+      if(b>c){
+        t=b;
+        b=c;
+        c=t;
+      }
+
+      document.getElementById("x").value=("a,b,c");
+    }*/
+    x = a>b;
+    switch(x){
+      case true:
+        t=a;
+        a=b;
+        b=t;
+    }
+    x = a>c;
+    switch(x){
+      case true:
+        t=a;
+        a=c;
+        c=t;
+    }
+    x = b>c;
+    switch(x){
+      case true:
+        t=b;
+        b=c;
+        c=t;
+    }
+    document.write(a,b,c);
+  </script>
+</head>
+<body>
+  <!--输入三个值：<br><input type="text" id="a"><br><br><input type="text" id="b"><br><br><input type="text" id="c"><br>-->
+  <!--<button onclick="onSort()">排序</button><br><input type="text" id="x">-->
+</body>
+</html>

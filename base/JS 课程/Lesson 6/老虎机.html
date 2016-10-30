@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--Author:ygz
+      Date:2016/8/1
+  -->
+  <meta charset="UTF-8">
+  <title>老虎机</title>
+  <style>
+    input{
+      text-align: center;
+      width: 30px;
+    }
+  </style>
+</head>
+<body>
+<input type="text" value="*" id="txt1">
+<input type="text" value="*" id="txt2">
+<input type="text" value="*" id="txt3">
+<button onclick="onClick()">抽奖</button>
+<script>
+  function onClick(){
+      var num1 = Math.round(Math.random()*12);
+      var num2 = Math.round(Math.random()*12);
+      var num3 = Math.round(Math.random()*12);
+      document.getElementById('txt1').value=num1;
+      document.getElementById('txt2').value=num2;
+      document.getElementById('txt3').value=num3;
+      if(num1 == num2 && num1 == num3 && num2 == num3){
+        alert('得200分');
+      }
+      else if(num1 == num2 || num1 == num3 || num2 == num3){
+        alert('得50分');
+      }
+  }
+</script>
+</body>
+</html>

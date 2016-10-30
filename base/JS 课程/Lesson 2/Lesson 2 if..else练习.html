@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--Author:ygz
+    Date:2016/7/26
+-->
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script>
+    function onClick(){
+      var score = document.getElementById("score").value;
+      if(score >= 60){
+        if(score < 90){
+          alert("妈妈给他买本参考书");
+        }
+        else{
+          if(score == 100){
+            alert ("爸爸给他买辆车")
+          }
+          else{
+            alert("妈妈给他买MP4")
+          }
+        }
+      }else{
+        alert("男女混合双打");
+      }
+    }
+  </script>
+</head>
+<body>
+<div>
+  考试成绩：<input type="text" id="score"><button onclick="onClick()">点击查看奖励</button>
+</div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--Author:ygz
+    Date:2016/7/28
+-->
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<table id="table" border="1">
+  <tr id="row1" onmouseover="show(this)" onmouseout="hide(this)">
+    <td>张三</td>
+    <td>男</td>
+    <td>深圳市南山区科技园425号</td>
+  </tr>
+  <tr id="row2" onmouseover="show(this)" onmouseout="hide(this)">
+    <td>李四</td>
+    <td>男</td>
+    <td>深圳市罗湖区怡景花园5号</td>
+  </tr>
+  <tr id="row3" onmouseover="show(this)" onmouseout="hide(this)">
+    <td>李晓红</td>
+    <td>女</td>
+    <td>广东省广州市天河区天河广场101号</td>
+  </tr>
+</table>
+<script>
+/*  window.onload=function(){
+    HeightLight();
+  };
+  function HeightLight() {
+    var oTable = document.getElementById("table");
+    var oTrs = oTable.getElementsByTagName("tr");
+    for (var i = 0; i < oTrs.length; i++) {
+      oTrs[i].onmouseover = function(){
+        this.style.backgroundColor = "gray";
+      };
+      oTrs[i].onmouseout = function(){
+        this.style.backgroundColor = "#fff";
+      }
+    }
+  }*/
+  //方法2
+  /*function show(obj){
+    var rows = document.getElementById(obj);
+    rows.onmouseover=function(){
+      this.style.backgroundColor= "red";
+    };
+    rows.onmouseout=function(){
+      this.style.backgroundColor= "#fff";
+    };
+  }
+  show("row1"); //传入一个字符串
+  show("row2");
+  show("row3");*/
+  //方法三
+  function show(obj){
+    obj.style.backgroundColor= "red";
+  }
+  function hide(obj){
+    obj.style.backgroundColor= "#fff";
+  }
+</script>
+</body>
+</html>

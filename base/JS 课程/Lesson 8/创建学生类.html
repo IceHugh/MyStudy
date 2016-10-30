@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--Author:ygz
+      Date:2016/8/5
+  -->
+  <meta charset="UTF-8">
+  <title>创建学生类</title>
+</head>
+<body>
+<script>
+  function Studen(name,age,gender){
+    this.name = name;
+    this.age = age;
+    this.gender = gender;
+  }
+  Studen.prototype.sayHi=function(){
+    alert("我的名字："+this.name+"\n我的年龄："+this.age+"\n性别："+this.gender);
+  };
+  var stu1 = new Studen("ygz","26","男");
+  stu1.sayHi();
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--Author:ygz
+    Date:2016/7/28
+-->
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    input{
+      outline: none;
+    }
+    span{
+      color: red;
+      opacity: 0;
+    }
+
+  </style>
+</head>
+<body>
+<p><input type="text" onmouseover="changeBg(this)" onmouseout="resetBg(this)" onblur="check(this,'txt1')" onfocus="check(this,'txt1')"><span id="txt1"> *</span></p>
+<p><input type="text"onmouseover="changeBg(this)" onmouseout="resetBg(this)" onblur="check(this,'txt2')" onfocus="check(this,'txt2')"><span id="txt2"> *</span></p>
+<p><input type="text"onmouseover="changeBg(this)" onmouseout="resetBg(this)" onblur="check(this,'txt3')" onfocus="check(this,'txt3')"><span id="txt3"> *</span></p>
+<script>
+  function changeBg(obj){
+    obj.style.borderColor = "red";
+  }
+  function resetBg(obj){
+    obj.style.borderColor = "initial";
+  }
+  function check(obj,id){
+    if(obj.value == "" || obj.value.length == 0){
+      document.getElementById(id).style.opacity = 1;
+    }else{
+      document.getElementById(id).style.opacity = 0;
+    }
+  }
+</script>
+</body>
+</html>

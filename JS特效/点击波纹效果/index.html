@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--Author:ygz
+      Date:2016/8/19
+  -->
+    <meta charset="UTF-8">
+    <title>点击波纹</title>
+    <style>
+        #wrap{
+            width: 600px;
+            height: 500px;
+            margin: 100px auto;
+            background: url(images/team-2.jpg) no-repeat;
+            background-size: cover;
+        }
+        button{
+            height: 80px;
+            width: 160px;
+        }
+    </style>
+</head>
+<body>
+<div id="wrap"></div>
+<button>12312</button>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorem et facere, in magni nostrum quaerat quibusdam similique unde vitae. Accusamus cumque id magnam magni odio porro quibusdam similique soluta.</p>
+<script src="js/jquery-3.1.0.min.js"></script>
+<script>
+    $("#wrap").click(function(event){
+        ripple(event,this)
+    });
+    $("button").click(function(event){
+        ripple(event,this)
+    });
+    $("p").click(function(event){
+        ripple(event,this)
+    });
+    function ripple(e,obj){
+        var _this = $(obj);
+        _this.css({position:"relative",overflow: "hidden"});
+        $("<span></span>").attr("class","ripple").css({
+            display: "inline-block",
+            position: "absolute",
+            width: "0",
+            height: "0",
+            borderRadius: "50%",
+            opacity: "1",
+            zIndex: "999",
+            backgroundColor:rgba,
+            top: e.pageY-_this.offset().top,
+            left: e.pageX-_this.offset().left
+        }).animate({
+            opacity: "0",
+            marginLeft: "-"+_this.width()+"px",
+            marginTop: "-"+_this.width()+"px",
+            width: _this.width()*2+"px",
+            height: _this.width()*2+"px"
+        },2000,function(){
+            _this.find(".ripple").each(function(index){
+                if(_this.find(".ripple").eq(index).width() === _this.width()*2){
+                    _this.find(".ripple").eq(index).remove()
+                }
+            });
+        }).appendTo(_this);
+    }
+    function rgba(){
+        var r = Math.round(Math.random()*255);
+        var g = Math.round(Math.random()*255);
+        var b = Math.round(Math.random()*255);
+        var a = (Math.random()*.3+.2).toFixed(2);
+        return "rgba("+r+","+g+","+b+","+a+")";
+    }
+</script>
+</body>
+</html>

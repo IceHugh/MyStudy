@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--Author:ygz
+    Date:2016/7/29
+-->
+  <meta charset="UTF-8">
+  <title>求平均分</title>
+</head>
+<body>
+
+<script>
+  var scores = [67,98,43,100,66,73];
+/*  function average(obj){
+    var inint = obj;
+    var max = inint[0];
+    var min = inint[0];
+    for(var i in inint){
+      if(min >= inint[i]){
+        min = inint[i]
+      }
+      if(max <= inint[i]){
+        max = inint[i]
+      }
+    }
+    document.write("最大值："+max+"<br>"+"最小值："+min);
+  }
+  average(scores);*/
+  function average(obj,boo) {
+    var inint = obj[0];
+    if(boo){
+      for (var i in obj) {
+        if (inint >= obj[i]) {
+          inint = obj[i];
+        }
+      }
+      document.write("最小值：" + inint);
+    } else {
+      for (var j in obj) {
+        if (inint <= obj[j]) {
+          inint = obj[j];
+        }
+      }
+      document.write("最大值：" + inint);
+    }
+  }
+   average(scores,false);
+</script>
+</body>
+</html>

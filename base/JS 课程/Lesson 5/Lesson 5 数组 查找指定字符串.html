@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--Author:ygz
+    Date:2016/7/29
+-->
+  <meta charset="UTF-8">
+  <title>查找指定字符串</title>
+</head>
+<body>
+输入需要检索的字符:<br>
+  <textarea id="text1"></textarea><br>
+检索字符<br>
+<input type="text" id="text2"><br>
+<button onclick="setRetrieve()">检索</button><br>
+检索结果:<br>
+<input type="text" id="text3">
+<script>
+  /*function check(str,obj){
+    var x = 0;
+    var arr = [];
+    for(var i=0;i<str.length;i++){
+      if(str[i]+str[i+1] == obj){
+        x++;
+        arr.push(str.indexOf(str[i],i));
+      }
+    }
+    document.write("指定的"+obj+"一共有"+x+"个；位置为："+arr)
+  }
+  check("我爱中国，我爱伟大的中国","中国")*/
+  function setRetrieve() {
+    var str =document.getElementById("text1").value;
+    var obj =document.getElementById("text2").value;
+    var arr = str.split(obj);
+    if (arr.length == 1) {
+      alert("检索不到内容");
+    } else {
+      var newArr = [];
+      newArr[0] = arr[0].length;
+      var x = 0;
+      for (var i = 1; i < arr.length-1; i++) {
+        x++;
+        newArr[i] = newArr[i-1] + arr[i].length + obj.length;
+      }
+      document.getElementById("text3").value= "一共有"+x+"个，位置为："+newArr;
+    }
+  }
+</script>
+</body>
+</html>

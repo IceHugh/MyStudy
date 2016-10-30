@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--Author:ygz
+    Date:2016/7/29
+-->
+  <meta charset="UTF-8">
+  <title>英文短句转换</title>
+</head>
+<body>
+<script>
+  function review(){
+    var scrose = [1,34,2,9,7,8];
+    var ln = scrose.length;
+    /*for(var i=0;i<ln;i++){
+      for(var j=i+1;j<ln;j++){
+        if(scrose[i]>scrose[j]){
+          var key = scrose[i];
+          scrose[i] = scrose[j];
+          scrose[j]= key;
+        }
+      }
+    }*/
+    scrose.sort(function(a,b){
+      return a-b;
+    });
+    document.write(scrose);
+  }
+  review();
+</script>
+</body>
+</html>

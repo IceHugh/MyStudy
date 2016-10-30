@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--Author:ygz
+      Date:2016/8/9
+  -->
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    #box{
+      width: 200px;
+      height: 200px;
+      background: red;
+      position: relative;
+      left: -200px;
+      top: 0;
+    }
+    #share {
+      width: 20px;
+      height: 50px;
+      background: blue;
+      position: absolute;
+      top: 75px;
+      left: 200px;
+    }
+  </style>
+</head>
+<body>
+<div id="box">
+  <span id="share">分享</span>
+</div>
+<script>
+  window.onload = function(){
+    var oDiv = document.getElementById("box");
+    oDiv.onmouseover = function(){
+      startMove(0);
+    };
+    oDiv.onmouseout = function(){
+      startMove(-200);
+    }
+  };
+  var timer = null;
+  function startMove(iTarget){
+    clearInterval(timer);
+    var oDiv = document.getElementById("box");
+    timer = setInterval(function(){
+      var speed = 0;
+      if(oDiv.offsetLeft > iTarget){
+        speed = -10;
+      }else{
+        speed = 10;
+      }
+      if(oDiv.offsetLeft == iTarget){
+        clearInterval(timer);
+      }else{
+        oDiv.style.left = oDiv.offsetLeft+speed+"px";
+      }
+    },30)
+  }
+</script>
+</body>
+</html>

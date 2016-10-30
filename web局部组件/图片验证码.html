@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+    <h1>SVG中绘制验证码</h1>
+
+    <svg id="svg7" width="100" height="30">
+    </svg>
+
+    <script>
+    //背景色：绘制铺满的矩形，颜色随机
+    var bg = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+    bg.setAttribute('width', 100);
+    bg.setAttribute('height', 30);
+    bg.setAttribute('fill', rc(180, 240));
+    svg7.appendChild(bg);
+
+    //添加随机文本
+    var db = 'abcdefghijkmnpqrstwxyzABCDEFGHJKLMNPQRSTWXYZ23456789';
+
+    //第一个字符
+    var c = db[ rn(0,db.length) ];
+    var text = document.createElementNS('http://www.w3.org/2000/svg','text');
+    text.innerHTML = c;
+    text.setAttribute('x', 10+rn(-5,5));
+    text.setAttribute('y', 25+rn(-5,5));
+    text.setAttribute('fill', rc(50,160));
+    text.setAttribute('font-size', rn(18,32));
+    text.setAttribute('rotate', rn(-45,45));
+    svg7.appendChild(text);
+    //第二个字符
+    var c = db[ rn(0,db.length) ];
+    var text = document.createElementNS('http://www.w3.org/2000/svg','text');
+    text.innerHTML = c;
+    text.setAttribute('x', 10+25+rn(-5,5));
+    text.setAttribute('y', 25+rn(-5,5));
+    text.setAttribute('fill', rc(50,160));
+    text.setAttribute('font-size', rn(18,32));
+    text.setAttribute('rotate', rn(-45,45));
+    svg7.appendChild(text);
+    //第三个字符
+    var c = db[ rn(0,db.length) ];
+    var text = document.createElementNS('http://www.w3.org/2000/svg','text');
+    text.innerHTML = c;
+    text.setAttribute('x', 10+25+25+rn(-5,5));
+    text.setAttribute('y', 25+rn(-5,5));
+    text.setAttribute('fill', rc(50,160));
+    text.setAttribute('font-size', rn(18,32));
+    text.setAttribute('rotate', rn(-45,45));
+    svg7.appendChild(text);
+    //第四个字符
+    var c = db[ rn(0,db.length) ];
+    var text = document.createElementNS('http://www.w3.org/2000/svg','text');
+    text.innerHTML = c;
+    text.setAttribute('x', 10+25+25+25+rn(-5,5));
+    text.setAttribute('y', 25+rn(-5,5));
+    text.setAttribute('fill', rc(50,160));
+    text.setAttribute('font-size', rn(18,32));
+    text.setAttribute('rotate', rn(-45,45));
+    svg7.appendChild(text);
+
+    //添加干扰线
+    for(var i=0; i<5; i++){
+        var line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+        line.setAttribute('x1', rn(0,100));
+        line.setAttribute('y1', rn(0,30));
+        line.setAttribute('x2', rn(0,100));
+        line.setAttribute('y2', rn(0,30));
+        line.setAttribute('x1', rn(0,100));
+        line.setAttribute('stroke', rc(50,160));
+        svg7.appendChild(line);
+    }
+
+    //添加杂色点
+    for(var i=0; i<50; i++){
+        var circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+        circle.setAttribute('cx', rn(0,100));
+        circle.setAttribute('cy', rn(0,30));
+        circle.setAttribute('r', 1); //半径为1的圆——就是点
+        circle.setAttribute('fill', rc(50,160));
+        svg7.appendChild(circle);
+    }
+
+
+
+    //生成一个随机的颜色值
+    function rc(min, max){
+        var r = Math.floor(Math.random()*(max-min)) + min;
+        var g = Math.floor(Math.random()*(max-min)) + min;
+        var b = Math.floor(Math.random()*(max-min)) + min;
+        return "rgb("+r+","+g+","+b+")";
+    }
+    //生成一个随机的整数
+    function rn(min, max){
+        return Math.floor(Math.random()*(max-min))+min;
+    }
+    </script>
+ </body>
+
+</html>

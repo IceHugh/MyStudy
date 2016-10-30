@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--Author:ygz
+    Date:2016/7/29
+-->
+  <meta charset="UTF-8">
+  <title>求平均分</title>
+</head>
+<body>
+
+<script>
+  function average(obj){
+    var inint= obj;
+    var sum = 0;
+    for(var i in inint){
+      sum += inint[i];
+    }
+    document.write("平均数为："+sum/inint.length);
+  }
+  average([67,98,43,100,66,73]);
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--Author:ygz
+    Date:2016/7/27
+-->
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  //如果一个正整数等于其各个数字的立方和，那么该数称为阿姆斯特朗数。如407=4的立方+0+7的立方。求出1000以内的阿姆斯特朗数。
+  for(var x =0;x<=9;x++){
+    for(var y =0;y<=9;y++){
+      for(var z =0;z<=9;z++){
+        if((x+y*10+z*100)==(x*x*x+y*y*y+z*z*z)){
+          document.write((x+y*10+z*100)+"<br>");
+        }
+      }
+    }
+  }
+
+</script>
+</body>
+</html>

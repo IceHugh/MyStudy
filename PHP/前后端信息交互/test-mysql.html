@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>前后端交互</title>
+</head>
+<body>
+    <form action="insertData.php" method="get" accept-charset="utf-8">
+        姓名：<input type="text" name="name"><br/><br/>
+        密码：<input type="password" name="pass"><br/><br/>
+        标题：<input type="text" name="title"><br/><br/>
+        内容：<textarea name="message"></textarea><br/><br/>
+        <input type="submit" name="submit" value="提交">
+    </form>
+    <table>
+        <caption>留言板</caption>
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>标题</th>
+                <th>内容</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <script>
+    var ajax = function(method,urlObj,successFn,failFn){
+    var oAjax;
+    if(window.XMLHttpRequest){
+        oAjax = new XMLHttpRequest();
+    }else{
+        oAjax = new ActiveXObject("microsoft.xmlhtto");
+    }
+    oAjax.onreadystatechange = function(){
+        if(oAjax.readyState == 4){
+          if(oAjax.status>=200 && oAjax.status < 300 || oAjax.status == 304){
+            successFn(oAjax.responseText);
+          }else{
+            if(failFn){
+              failFn(oAjax.status);
+            }
+          }
+        }
+    };
+    /*function addURLParam(obj){
+    obj.url +=(obj.url.indexOf("?") == -1?"?":"&");
+    obj.url +=encodeURIComponent(obj.name) + "=" + encodeURIComponent(obj.value);
+    return obj.url;
+    }
+    var newurl = urlObj;
+    newurl = addURLParam(newurl);*/
+    oAjax.open("get",urlObj,true);
+    oAjax.setRequestHeader("MyHeader","MyValue");
+    oAjax.send(null);
+    };
+    ajax("get","test-loin.php",function(data){
+        var json = JSON.parse(data);
+        var oTbody = document.getElementsByTagName("tbody")[0];
+        console.log(oTbody);
+        for (var i = 0; i < json.length; i++) {
+            oTr = document.createElement("tr");
+            oTr.innerHTML = '<td>'+json[i].name+'</td><td>'+json[i].title+'</td><td>'+json[i].message+'</td>';
+            oTbody.appendChild(oTr);
+        }
+    });
+    </script>
+</body>
+</html>

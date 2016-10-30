@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--Author:ygz
+      Date:2016/8/8
+  -->
+  <meta charset="UTF-8">
+  <title>天气预报界面</title>
+  <style>
+    div{
+      width: 260px;
+      margin: 200px auto;
+      border: 1px solid #000;
+    }
+    p{
+      text-align: center;
+    }
+    div select{
+      width: 200px;
+      text-align: center;
+    }
+    div select option{
+
+    }
+  </style>
+</head>
+<body>
+<div>
+  <p>
+    <label for="province">省</label>
+    <select name="province" id="province">
+      <option value="selected" selected>---- 请选择 ----</option>
+      <option value="广东">广东</option>
+      <option value="广东">湖南</option>
+    </select>
+  </p>
+  <p>
+    <label for="city">市</label>
+    <select name="city" id="city">
+      <option value="selected" selected>---- 请选择 ----</option>
+      <option value="深圳">深圳</option>
+      <option value="长沙">长沙</option>
+    </select>
+  </p>
+  <p>
+    <button id="query">查询</button>
+  </p>
+  <p id="wetInfo">请选择省份</p>
+</div>
+<script>
+/*  var oCity = g("city");
+  var oQuery= g("query");
+  var oWetInfo= g("wetInfo");
+  function g(id){
+    return document.getElementById(id);
+  }
+  oQuery.onclick = function(){
+  var oAjax;
+  if(window.XMLHttpRequest){
+    oAjax = new XMLHttpRequest();
+  }else{
+    oAjax = new ActiveXObject("microsoft.xmlhtto");
+  }
+  oAjax.onreadystatechange = function() {
+    if (oAjax.readyState == 4) {
+      if (oAjax.status >= 200 && oAjax.status < 300 || oAjax.status == 304) {
+        showWeather(oAjax.responseText)
+        }else {
+        alert("error")
+        }
+      }
+    };
+    oAjax.open("get","weatherInfo.json", true);
+    oAjax.setRequestHeader("MyHeader","MyValue");
+    oAjax.send(null);
+    function showWeather(obj){
+      var weather = JSON.parse(obj);
+      var oWet = weather.weatherinfo;
+      if(oCity.value == oWet.city){
+        oWetInfo.innerHTML = oWet.city+" "+oWet.weather+"<img src=\'"+oWet.img1+"\'>"+" "+"<img src=\'"+oWet.img2+"\'>"+" "+oWet.temp1+"/"+oWet.temp2;
+      }
+    }
+  }*/
+
+var oCity = g("city");
+var oQuery= g("query");
+var oWetInfo= g("wetInfo");
+oQuery.onclick = function(){
+  ajaxL("get",{url: "weatherInfo.json",name:"name",value:"ygz"},function(obj){
+    var weather = JSON.parse(obj);
+    var oWet = weather.weatherinfo;
+    if(oCity.value == oWet.city){
+      oWetInfo.innerHTML = oWet.city+" "+oWet.weather+"<img src=\'"+oWet.img1+"\'>"+" "+"<img src=\'"+oWet.img2+"\'>"+" "+oWet.temp1+"/"+oWet.temp2;
+    }
+  })
+};
+function g(id){
+  return document.getElementById(id);
+}
+function ajaxL(method,urlObj,successFn,failFn){
+  var oAjax;
+  if(window.XMLHttpRequest){
+    oAjax = new XMLHttpRequest();
+  }else{
+    oAjax = new ActiveXObject("microsoft.xmlhtto");
+  }
+  oAjax.onreadystatechange = function(){
+    if(oAjax.readyState == 4){
+      if(oAjax.status>=200 && oAjax.status < 300 || oAjax.status == 304){
+        successFn(oAjax.responseText);
+      }else{
+        if(failFn){
+          failFn(oAjax.status);
+        }
+      }
+    }
+  };
+  function addURLParam(obj){
+    obj.url +=(obj.url.indexOf("?") == -1?"?":"&");
+    obj.url +=encodeURIComponent(obj.name) + "=" + encodeURIComponent(obj.value);
+    return obj.url;
+  }
+  var newurl = urlObj;
+  newurl = addURLParam(newurl);
+  oAjax.open(method,newurl,true);
+  oAjax.setRequestHeader("MyHeader","MyValue");
+  oAjax.send(null);
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>浮动广告</title>
+<style type="text/css">
+#container{
+	width:980px;
+	margin:0 auto;
+}
+.adv{
+	width:159px;
+	height:441px;
+	float:left;
+	position:absolute;
+	background:url(images/adv.jpg);
+	top:0;
+}
+</style>
+</head>
+<body>
+<div id="container">
+<img src="images/jiuye.gif"/>
+<img src="images/kechenganai.gif"/>
+</div>
+<div class="adv" id="adv"></div>
+<script>
+  var adv = document.getElementById("adv");
+  window.onscroll=function(){
+    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    adv.style.top = scrollTop+"px";
+  }
+</script>
+</body>
+</html>

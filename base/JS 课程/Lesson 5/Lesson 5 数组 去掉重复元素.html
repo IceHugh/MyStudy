@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--Author:ygz
+    Date:2016/7/29
+-->
+  <meta charset="UTF-8">
+  <title>求平均分</title>
+</head>
+<body>
+
+<script>
+  var array=[1,1,2,3,4,2,3,6,8,9,9,6];
+  function noRepeat(arr){
+    /*for(var i=0;i<arr.length;i++){
+      for(var j=i+1;j<arr.length;j++) {
+          if(arr[i] == arr[j]){
+            arr.splice(j,1)
+          }
+      }
+    }
+    console.log(arr);*/
+    //方法2
+    /*arr.sort();
+    var newArr = [arr[0]];
+    for(var i=0;i<arr.length;i++){
+      if(arr[i] != newArr[newArr.length-1]){
+        newArr.push(arr[i]);
+      }
+    }*/
+    //方法三
+     var newArr = [arr[0]];
+     for(var i=0;i<arr.length;i++){
+       if(newArr.indexOf(arr[i]) == -1){
+         newArr.push(arr[i]);
+       }
+     }
+    console.log(newArr);
+  }
+  noRepeat(array);
+</script>
+</body>
+</html>

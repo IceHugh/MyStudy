@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--Author:ygz
+    Date:2016/7/26
+-->
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+输入年龄：<input type="text" id="age" onchange="setAge()">
+  <script>
+    function setAge() {
+      var age = document.getElementById("age").value;
+      switch (true) {
+        case age <= 44:
+          alert("按照联合国世界卫生组织对年龄的划分标准，你是：\n 青年人");
+          break;
+        case (45 <= age && age <= 59):
+          alert("按照联合国世界卫生组织对年龄的划分标准，你是：\n 中年人");
+          break;
+        case (60 <= age && age<= 89):
+          alert("按照联合国世界卫生组织对年龄的划分标准，您是：\n 老年人");
+          break;
+        case age >= 90:
+          alert("按照联合国世界卫生组织对年龄的划分标准，您是：\n 长寿老年人");
+          break;
+      }
+    }
+  </script>
+</body>
+</html>

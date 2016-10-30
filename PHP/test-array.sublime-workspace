@@ -1,0 +1,663 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"demo",
+				"demo2.php"
+			],
+			[
+				"str_re",
+				"str_replace〔function〕"
+			],
+			[
+				"strp",
+				"strpos〔function〕"
+			],
+			[
+				"_se",
+				"$_SESSION〔variable〕"
+			],
+			[
+				"_s",
+				"$_SESSION〔variable〕"
+			],
+			[
+				"date_de",
+				"date_default_timezone_set"
+			],
+			[
+				"hea",
+				"header	<header>"
+			],
+			[
+				"baby",
+				"babyTail〔variable〕"
+			],
+			[
+				"babyT",
+				"babyTailCount〔variable〕"
+			],
+			[
+				"ba",
+				"babyTailTimer"
+			],
+			[
+				"bab",
+				"babyTailTimer〔variable〕"
+			],
+			[
+				"b",
+				"babyEye〔variable〕"
+			],
+			[
+				"can",
+				"canWidth〔variable〕"
+			],
+			[
+				"ech",
+				"echo	echo \"…\""
+			],
+			[
+				"us",
+				"$userpassword〔variable〕"
+			],
+			[
+				"PDO",
+				"PDOException〔class〕"
+			],
+			[
+				"tr",
+				"try	Wrap in try { … } catch (…) { … }"
+			],
+			[
+				"he",
+				"header"
+			],
+			[
+				"print",
+				"print_r〔function〕"
+			],
+			[
+				"age",
+				"$ages〔variable〕"
+			],
+			[
+				"so",
+				"sort"
+			],
+			[
+				"array",
+				"array"
+			],
+			[
+				"p",
+				"Program Files\\"
+			],
+			[
+				"if",
+				"ifelse	if … else …"
+			],
+			[
+				"time",
+				"time〔function〕"
+			],
+			[
+				"M",
+				"Math.PI	Math"
+			],
+			[
+				"image",
+				"new Image()"
+			],
+			[
+				"function",
+				"function without name"
+			],
+			[
+				"fruit",
+				"fruitType"
+			],
+			[
+				"pro",
+				"prototype"
+			],
+			[
+				"for",
+				"for	for (…) {…}"
+			],
+			[
+				"fun",
+				"function without name"
+			],
+			[
+				"bac",
+				"background.jpg	w:800 h:600"
+			],
+			[
+				"funct",
+				"function with name"
+			],
+			[
+				"now",
+				"now〔variable〕"
+			],
+			[
+				"comm",
+				"commonFunctions.js"
+			],
+			[
+				"dgi",
+				"document.getElementById(id)	Document"
+			],
+			[
+				"docume",
+				"document.body	Document"
+			],
+			[
+				"a",
+				"auto"
+			],
+			[
+				"nu",
+				"Number(Object)	Object"
+			],
+			[
+				"sli",
+				"siblings〔function〕"
+			],
+			[
+				"sub",
+				"subtract"
+			],
+			[
+				"remove",
+				"removeClass	.removeClass()"
+			],
+			[
+				"add",
+				"addClass〔function〕"
+			],
+			[
+				"an",
+				"animate"
+			],
+			[
+				"buy",
+				"buycar.js"
+			],
+			[
+				"class",
+				"class=〔attribute〕"
+			],
+			[
+				"sp",
+				"sp/"
+			],
+			[
+				"text-",
+				"text-orange"
+			],
+			[
+				"th",
+				"thead	Tag"
+			],
+			[
+				"logo",
+				"div.logo"
+			],
+			[
+				"append",
+				"appendTo〔function〕"
+			],
+			[
+				"images",
+				"images/"
+			],
+			[
+				"t",
+				"this	$(this)"
+			],
+			[
+				"hover",
+				"hover	.hover()"
+			],
+			[
+				"unde",
+				"undefined〔keyword〕"
+			],
+			[
+				"oLi",
+				"oLi2〔variable〕"
+			],
+			[
+				"clear",
+				"clearInterval〔function〕"
+			],
+			[
+				"margin",
+				"marginLeft	Style CSS"
+			],
+			[
+				"f",
+				"for	for (…) {…} (Improved Native For-Loop)"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "pic",
+		"selected_items":
+		[
+			[
+				"pic",
+				"Package Control: Install Package"
+			],
+			[
+				"menu",
+				"View: Toggle Menu"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"ssys",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"pci",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"settingu",
+				"Preferences: Settings - User"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"setting",
+				"Preferences: Settings - User"
+			],
+			[
+				"view",
+				"View: Toggle Menu"
+			],
+			[
+				"j",
+				"JSLint"
+			],
+			[
+				"co",
+				"Code Folding: Unfold All"
+			],
+			[
+				"autp",
+				"Autoprefix CSS"
+			]
+		],
+		"width": 528.0
+	},
+	"console":
+	{
+		"height": 153.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/F/PHPstudy/test/demo2.php",
+		"/F/PHPstudy/test/demo2.html",
+		"/F/PHPstudy/test/welcome.php",
+		"/F/PHPstudy/test/test-string.php",
+		"/F/PHPstudy/test/test7.php",
+		"/F/PHPstudy/test/test-strpos.php",
+		"/F/PHPstudy/test/test-session.php",
+		"/F/PHPstudy/test/test-cookie.php",
+		"/F/PHPstudy/test/test1.php",
+		"/F/PHPstudy/test/test2.php",
+		"/F/PHPstudy/test/test3.php",
+		"/F/PHPstudy/test/test4.php",
+		"/F/PHPstudy/test/test5.php",
+		"/F/PHPstudy/test/test6.php",
+		"/F/PHPstudy/test/form.html",
+		"/F/PHPstudy/test/test-mysql.php",
+		"/F/Myproject/HTML5-爱心鱼/js/ane.js",
+		"/F/Myproject/HTML5-爱心鱼/js/background.js",
+		"/F/Myproject/HTML5-爱心鱼/js/commonFunctions.js",
+		"/F/Myproject/HTML5-爱心鱼/js/fruit.js",
+		"/F/Myproject/HTML5-爱心鱼/js/mom.js",
+		"/F/Myproject/HTML5-爱心鱼/js/baby.js",
+		"/F/Myproject/HTML5-爱心鱼/js/main.js",
+		"/F/Myproject/HTML5-爱心鱼/js/collision.js",
+		"/F/Myproject/HTML5-爱心鱼/index.html",
+		"/F/PHPstudy/test/test-mysql",
+		"/F/PHPstudy/test/phpinfo.php",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/User/HTMLBeautify.sublime-settings",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/HTMLBeautify/HTMLBeautify.sublime-settings",
+		"/F/PHPstudy/test/test-namespace.php",
+		"/F/PHPstudy/test/test-superglobal.php",
+		"/F/PHPstudy/test/test-array.php",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/CodeFormatter/CodeFormatter.sublime-settings",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/User/CodeFormatter.sublime-settings",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/CodeFormatter/README.md",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/Default (Windows).sublime-keymap",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/phpcbf/phpcbf.sublime-settings",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/User/phpcbf.sublime-settings",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/phpcbf/Default (Windows).sublime-keymap",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/CodeFormatter/Default (Windows).sublime-keymap",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/PHP Form Builder/Default (Windows).sublime-keymap",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/JSLint/JSLint.sublime-settings",
+		"/F/Myproject/瀑布流/练习一.html",
+		"/F/Myproject/瀑布流/js/script.js",
+		"/F/Myproject/导航栏制作/js/jquery-3.0.0.min.js",
+		"/F/Myproject/导航栏制作/js/js1.js",
+		"/F/Myproject/扁平化风格博客/css/style.css",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/User/php.sublime-build",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Settings/SideBarEnhancements.json",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/SublimeLinter/SublimeLinter.sublime-settings",
+		"/F/PHPstudy/test/test2",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Administrator/Desktop/ha_USBWebserver/root/first/hello.php",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/User/Side Bar.sublime-settings",
+		"/C/Users/Administrator/Desktop/ha_USBWebserver/root/phpinfo.php",
+		"/C/Users/Administrator/Desktop/ha_USBWebserver/root/index.php",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/User/console.log().sublime-snippet",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/JavaScript Completions/JavaScript-Completions.sublime-settings",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/User/JavaScript-Completions.sublime-settings",
+		"/F/Myproject/HTML5-爱心鱼/terminal.glue",
+		"/F/Myproject/kedewang/app/css/buycar.css",
+		"/F/Myproject/kedewang/app/js/buycar.js",
+		"/F/Myproject/kedewang/app/sass/buycar.scss",
+		"/F/Myproject/kedewang/app/buycar.html",
+		"/F/Myproject/kedewang/app/sass/index-style.scss",
+		"/F/Myproject/kedewang/app/index.html",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/Emmet/Emmet.sublime-settings",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/Emmet/Default (Windows).sublime-keymap",
+		"/F/Myproject/kedewang/app/css/index-style.css",
+		"/F/Myproject/kedewang/app/js/index.js",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/CSScomb/Default.sublime-keymap",
+		"/F/Myproject/derongonline/app/js/main.js",
+		"/F/Myproject/Imooc/侧边栏/js/mian.js",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/Alignment/Default (Windows).sublime-keymap",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/JSLint/Default.sublime-keymap",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/HTMLPrettify.sublime-settings",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/.jsbeautifyrc",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/AutoFileName/autofilename.sublime-settings",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/Browser Refresh/Default (Windows).sublime-keymap",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/SublimeCodeIntel/SublimeCodeIntel.sublime-settings",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/CSS Format/Example.sublime-keymap",
+		"/F/Myproject/dsafd",
+		"/F/Myproject/dis",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/Gutter Color/GutterColor.sublime-settings",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/Color Highlighter/Default.sublime-keymap",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/SidebarSeparator/SidebarSeparator.sublime-settings",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/SideBarEnhancements/Default (Windows).sublime-keymap",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/CSScomb/README.md",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/User/Package Control.sublime-settings",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/Autoprefixer/Autoprefixer.sublime-settings",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/User/console.log().sublime_snippet",
+		"/C/Users/Administrator/Documents/Downloads/test.js",
+		"/F/Myproject/3D 正方体/3D正方体.html"
+	],
+	"find":
+	{
+		"height": 31.0
+	},
+	"find_in_files":
+	{
+		"height": 108.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"1",
+			"babyTailCount",
+			"babyEye",
+			"mx",
+			";\n",
+			"x",
+			"X",
+			"listener",
+			"bigEye",
+			"bigTail",
+			"bigEye",
+			"this",
+			"i",
+			"aneId",
+			"i",
+			"aneId",
+			"aneObj",
+			"AneObj",
+			"aneObj",
+			"background",
+			"drawBackground",
+			"argument",
+			"context",
+			"\");\n",
+			"canvas1",
+			"argument",
+			"gNum",
+			"tr",
+			">\n",
+			"5FCDFE",
+			"div",
+			">\n",
+			"\"></",
+			"comment-box",
+			"infoBox",
+			"btnUl",
+			">\n",
+			"52278001",
+			">\n",
+			"日月光店",
+			".shop-item",
+			"<img src=\"images/bp_a1(1).jpg\" alt=\"no see\">",
+			"<img src=\"images/bp_a1.jpg\" alt=\"no see\">",
+			"\">\n",
+			"goods-detail",
+			"classify-item7",
+			"');\n",
+			"sales-promotion-info",
+			"classify-detail",
+			"follow-us",
+			"img",
+			"shop-info-traffic",
+			"worth-buying",
+			"worth-buying-icon",
+			"bracket",
+			"cke",
+			"service-icon",
+			"icon-brand",
+			" \">",
+			" \"",
+			" \">",
+			"commodity-list ",
+			"favorable text-orange ",
+			"<a href=\"#\" class=\"waggle\"><img src=\"images/1f_1.jpg\" alt=\"no see\"></a>\n                    <p class=\"text-orange\">￥166.00</p>\n                    <a href=\"#\">博士伦蕾丝明眸日抛30片装（3色）</a>\n                    <p class=\"favorable\">送滴眼液</p>",
+			"floor-1",
+			"waggle",
+			"btn-action",
+			"action",
+			"privilege-activity",
+			"privilege-activity-9",
+			"this",
+			"2",
+			"*/\n",
+			"privilege-activity",
+			"activity-list",
+			"search-icon",
+			"color",
+			"none",
+			"contact",
+			"隐私安全",
+			"网站地图",
+			"眼镜百科",
+			"友情链接",
+			"联系我们",
+			"h3",
+			"=\"\">",
+			"border-box",
+			"box",
+			"\n    ",
+			">\n",
+			"    <meta charset=\"UTF-8\">\n",
+			">\n",
+			"alignment",
+			"command",
+			"alignment",
+			"\"\n",
+			"html",
+			"<!DOCTYPE html>\n<html>\n<head>\n	<title></title>\n</head>\n<body>\n\n</body>\n</html>"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"<span class=\"text-weight\">新天地店</span>",
+			"<a href=\"#\"><img src=\"images/bp_a1(1).jpg\" alt=\"no see\"></a>",
+			"<a href=\"#\" class=\"privilege-ad-top\"><img src=\"images/bp_a1.jpg\" alt=\"no see\"></a>",
+			"\">",
+			"favorable",
+			"placeholder"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 31.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/User/php.sublime-build",
+	"project": "test-array.sublime-project",
+	"replace":
+	{
+		"height": 58.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 211.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

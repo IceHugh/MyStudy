@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--Author:ygz
+    Date:2016/7/29
+-->
+  <meta charset="UTF-8">
+  <title>英文短句转换</title>
+</head>
+<body>
+请输入英文：<input type="text" id="newO">
+<button  onclick="review()"> 转换</button>
+Camel命名形式：<input type="text" id="newE">
+<script>
+  function review(){
+    var clause = document.getElementById("newO").value;
+    var arra = clause.split(" ");
+    var ln = arra.length;
+    //方法一
+    var newArra = arra;
+    var newCla= arra[0].replace(arra[0],arra[0].toLowerCase());
+    for(var i=1;i<ln;i++){
+      newArra[i] = arra[i].replace(arra[i][0],arra[i][0].toUpperCase());
+      newCla += newArra[i];
+    }
+    document.getElementById("newE").value=newCla;
+    //方法二
+    // var newArr = "";
+    // for(var i=1;i<arra.length-1;i++){
+    //   var firstWord = arra[i][0].toUpperCase();
+    //   var lastWord = arra[i].substring(1).toLowerCase();
+    //   newArr +=firstWord+lastWord;
+    // }
+    // document.getElementById("newE").value=arra[0].toLowerCase()+newArr;
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--Author:ygz
+      Date:2016/8/11
+  -->
+  <meta charset="UTF-8">
+  <title>手风琴</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    ul{
+      list-style: none;
+      margin:20px auto;
+      width: 800px;
+      height: 400px;
+      position: relative;
+      overflow: hidden;
+    }
+    li{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+<ul id="box">
+  <li><img src="images/1.jpg" alt="no see"></li>
+  <li><img src="images/2.jpg" alt="no see"></li>
+  <li><img src="images/3.jpg" alt="no see"></li>
+  <li><img src="images/4.jpg" alt="no see"></li>
+  <li><img src="images/5.jpg" alt="no see"></li>
+  <li><img src="images/5.jpg" alt="no see"></li>
+</ul>
+<script src="js/move.js"></script>
+<script>
+  var oUl = document.getElementById("box");
+  var oLi = toArray(oUl.getElementsByTagName("li"));
+  var len = oLi.length;
+  var ulWidth = oUl.offsetWidth;
+  var liLeft = Math.round(ulWidth/len);
+  for(var i in oLi){
+    oLi[i].style.left = i*liLeft+"px";
+  }
+
+  for(var i in oLi){
+    oLi[i].idx = i;
+    oLi[i].onmouseover = function(){
+      for(var j=0;j<len;j++){
+        console.log(this.idx);
+        if(j<=this.idx){
+          startMove(oLi[j],{"left":j*10},1000);
+        }else{
+          startMove(oLi[j],{"left":(ulWidth-(len-j)*10)},1000);
+        }
+      }
+    };
+    oLi[i].onmouseout = function() {
+      for(var j=0;j<len;j++) {
+        startMove(oLi[j],{"left":j * liLeft},1000);
+      }
+    }
+  }
+
+  function toArray(arr){
+    var newArr=[];
+    for(var i=0,len=arr.length;i<len;i++)
+    {
+      newArr.push(arr[i])
+    }
+    return newArr;
+  }
+
+  function aa(){
+    var b=11;
+    return function cc(){
+      b++;
+      alert(b)
+    }
+  }
+  console.log(aa()())
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--Author:ygz
+    Date:2016/7/27
+-->
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  for(var i=1;i<100;i++){
+    var s = 0;
+    for(var x=2;x<i;x++){
+      if(i%x == 0){           //当i能被任意一个x整除，跳出循环
+        s=1;                  //通过一个中间变量返回第一个for循环的跳出条件
+      }
+    }
+    if(s==1){
+      continue;
+    }
+    document.write(i+"<br>")
+  }
+</script>
+</body>
+</html>

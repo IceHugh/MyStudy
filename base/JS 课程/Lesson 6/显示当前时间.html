@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--Author:ygz
+      Date:2016/8/1
+  -->
+  <meta charset="UTF-8">
+  <title>显示当前时间</title>
+</head>
+<body>
+<script>
+/*  var time = new Date();
+  time.setHours(time.getHours()+8);
+  document.write(time.toJSON().substring(0,10)+" "+time.toJSON().substring(11,19))*/
+  //方法二
+  var time = new Date();
+  function getAll(setDate){
+    if(setDate<10){
+      return "0"+setDate;
+    }else{
+      return setDate;iuiu
+    }
+  }
+  var year = time.getFullYear();
+  var mon = getAll(time.getMonth()+1);
+  var dd = getAll(time.getDate());
+  var hour = getAll(time.getHours());
+  var min = getAll(time.getMinutes());
+  var sec = getAll(time.getSeconds());
+  document.write(year+"-"+mon+"-"+dd+" "+hour+":"+min+":"+sec)
+</script>
+</body>
+</html>

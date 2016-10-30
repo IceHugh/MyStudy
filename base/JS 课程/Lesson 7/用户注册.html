@@ -1,0 +1,198 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>用户注册</title>
+<style>
+.text-right{
+	text-align:right;
+}
+.text-center{
+	text-align:center;
+}
+#regUser table{
+	border-collapse:collapse;
+}
+#regUser td, #regUser th{
+	padding:4px;
+	border-color:#ccc;
+}
+#regUser td{
+	font-size:12px;
+}
+#regUser .error{
+	color:red;
+  font-weight: bold;
+}
+#regUser .ok{
+  color:green;
+  font-weight: bold;
+}
+input[type="text"],input[type="password"]{
+	border:1px solid #6FC;
+	width:200px;
+	height:20px;
+}
+.imgBtn{
+	width:80px;
+	height:34px;
+	border:0px;
+	cursor:pointer;
+}
+#submit{
+  background: #ccc;
+  color: darkblue;
+  margin-right: 10px;
+}
+#reset{
+  color: darkblue;
+	background: gold;
+}
+</style>
+</head>
+
+<body>
+<form id="regUser">
+<table border="1">
+	<tr>
+    	<th colspan="3">用户注册</th>
+	</tr>
+  <tr>
+    <td width="200" class="text-right">用户名：</td>
+    <td width="200"><input type="text" id="userName" name="userName"/></td>
+    <td width="400"><div id="nameMsg"></div></td>
+  </tr>
+  <tr>
+    <td class="text-right">密码：</td>
+    <td><input type="password" id="password" name="password"/></td>
+    <td><div id="passwordMsg"></div></td>
+  </tr>
+  <tr>
+    <td class="text-right">确认密码：</td>
+    <td><input type="password" id="confirmPwd" name="conmfirmPwd"/></td>
+    <td><div id="confirmPwdMsg"></div></td>
+  </tr>
+  <tr>
+    <td class="text-right">电子邮箱：</td>
+    <td><input type="text" id="email" name="email"/></td>
+    <td><div id="emailMsg"></div></td>
+  </tr>
+  <tr>
+    <td colspan="3" class="text-center">
+      <input type="submit" id ="submit" class="imgBtn" value="提交" disabled="disabled"/>
+      <input type="reset" id="reset" class="imgBtn" value="重置"/>
+    </td>
+  </tr>
+</table>
+</form>
+<script>
+  function g(id){
+    return document.getElementById(id);
+  }
+  var form = g("regUser");
+  var userName = g("userName");
+  var password = g("password");
+  var confirmPwd = g("confirmPwd");
+  var email = g("email");
+  var nameMsg = g("nameMsg");
+  var passwordMsg = g("passwordMsg");
+  var confirmPwdMsg = g("confirmPwdMsg");
+  var emailMsg = g("emailMsg");
+  var oSub = g("submit");
+  var emlreg = /^\w+@\w+(\.[a-z]{2,3})+$/ig;
+  userName.onkeyup = x= function(){
+    var useLen = userName.value.length;
+    if( useLen == 0){
+      nameMsg.innerHTML= "用户名不能为空";
+      nameMsg.className = "error";
+      userName.focus();
+    }else if(useLen> 8){
+      nameMsg.innerHTML= "用户名不能超过8个字符";
+      nameMsg.className = "error";
+      userName.focus();
+    }else{
+      nameMsg.innerHTML= "用户名通过";
+      nameMsg.className = "ok";
+    }
+  };
+
+  console.log(x);
+  password.onkeyup = function(){
+    var passLen = password.value.length;
+    if( passLen == 0){
+      passwordMsg.innerHTML= "密码不能为空";
+      passwordMsg.className = "error";
+      password.focus();
+    }else if(passLen < 6){
+      passwordMsg.innerHTML= "密码不能少于6个字符";
+      passwordMsg.className = "error";
+      password.focus();
+    }else{
+      passwordMsg.innerHTML= "密码通过";
+      passwordMsg.className = "ok";
+    }
+  };
+  confirmPwd.onkeyup = function(){
+      if(confirmPwd.value == password.value){
+        confirmPwdMsg.innerHTML = "密码一致";
+        confirmPwdMsg.className = "ok";
+      }else{
+        confirmPwdMsg.innerHTML = "密码不一致";
+        confirmPwdMsg.className = "error";
+        confirmPwd.focus();
+      }
+  };
+  email.onkeyup = function(){
+    var emlLen = email.value.length;
+    if(emlLen == 0){
+      emailMsg.innerHTML= "邮箱不能为空";
+      emailMsg.className = "error";
+      email.focus();
+    }else if(emlreg.test(email.value)){
+      emailMsg.innerHTML= "邮箱正确";
+      emailMsg.className = "ok";
+      return true;
+    }else{
+      emailMsg.innerHTML= "邮箱不正确";
+      emailMsg.className = "error";
+      email.focus();
+    }
+  };
+
+  /*form.onsubmit=function(){
+    if(userName.value == ""){
+      alert("用户名不能为空");
+      return false;
+    }
+    if(password.value == ""){
+      alert("密码不能为空");
+      return false;
+    }
+    if(confirmPwd.value == ""){
+      alert("请再次输入密码");
+      return false;
+    }
+    if(email.value == ""){
+      alert("邮箱不能为空");
+      return false;
+    }
+    if(userName.value.length > 8){
+      alert("用户名不能超过8个字符");
+      return false;
+    }
+    if(password.value.length < 6){
+      alert("密码不能小于6个字符");
+      return false;
+    }
+    if(confirmPwd.value != password.value){
+      alert("请输入相同的密码");
+      return false;
+    }
+    if(!emlreg.text(email.value)){
+      alert("请输入正确的邮箱");
+      return false;
+    }
+  }*/
+</script>
+</body>
+</html>

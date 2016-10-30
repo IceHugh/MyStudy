@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--Author:ygz
+    Date:2016/7/25
+-->
+	<meta charset="UTF-8">
+	<title>检测输入值，抛出异常</title>
+	<script>
+		function myFunction() {
+			try {
+				var num = document.getElementById("demo").value;
+				if(num == "") throw "空值";
+				if(isNaN(num)) throw "不是数字";
+				if(num > 10) throw "值太大";
+				if(num < 5) throw "值太小";
+			}
+			catch(err) {
+				document.getElementById("mess").innerHTML = "错误："+err;
+			}
+		}
+	</script>
+</head>
+<body>
+	<h2>我的第一个JavaScript</h2>
+	<p>请输入一个5到10之间的数字</p>
+	<input type="text" name="num" id="demo">
+	<button onclick="myFunction()">测试输入</button>
+	<p id="mess"></p>
+</body>
+</html>

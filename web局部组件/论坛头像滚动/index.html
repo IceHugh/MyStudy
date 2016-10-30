@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <style>
+    .box {
+        width: 300px;
+        height: 500px;
+        border: 1px solid #ccc;
+        position: relative;
+    }
+
+    .box2 {
+        height: 400px;
+    }
+
+    .box3 {
+        height: 700px;
+    }
+
+    .box4 {
+        height: 100px;
+    }
+
+    .box5 {
+        height: 1000px;
+    }
+
+    img {
+        width: 80px;
+        height: 80px;
+        border: 1px solid red;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="box box1">
+        <div class="imgbox"><img src="images/4f_1.jpg" alt="1"></div>
+    </div>
+    <div class="box box2">
+        <div class="imgbox"><img src="images/4f_1.jpg" alt="2"></div>
+    </div>
+    <div class="box box3">
+        <div class="imgbox"><img src="images/4f_1.jpg" alt="3"></div>
+    </div>
+    <div class="box box4">
+        <div class="imgbox"><img src="images/4f_1.jpg" alt="3"></div>
+    </div>
+    <div class="box box5">
+        <div class="imgbox"><img src="images/4f_1.jpg" alt="3"></div>
+    </div>
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <script>
+    $(function() {
+        var $imgBox = $('.imgbox');
+        var $box = $('.box');
+        var l = $imgBox.offset().left;
+        $(window).scroll(function() {
+            var wTop = $(window).scrollTop();
+            $box.each(function(i) {
+                if (wTop > $(this).offset().top) {
+                    $(this).find(".imgbox").css({
+                        position: "fixed",
+                        top: "0"
+                    });
+                    if (wTop > $(this).offset().top + $(this).height() - $(this).find(".imgbox").height() - 20) {
+                        $(this).find(".imgbox").css({
+                            position: "absolute",
+                            top: $(this).height() - $(this).find(".imgbox").height() - 20 + "px"
+                        });
+                    }
+                } else {
+                    $(this).find(".imgbox").css({
+                        position: "absolute",
+                        top: "0"
+                    });
+                }
+            })
+        })
+    })
+    </script>
+</body>
+
+</html>

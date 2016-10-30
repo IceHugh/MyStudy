@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--Author:ygz
+      Date:2016/8/4
+  -->
+  <meta charset="UTF-8">
+  <title>检查客户端状态</title>
+</head>
+<body>
+<script>
+  window.onload = function(){
+    var w = screen.availWidth;
+    if(w<1440){
+      alert("请把分辨率设置在1440以上以获得最佳体验")
+    }
+    var brows = navigator.userAgent;
+    alert(brows);
+    if(brows.indexOf("MSIE") == -1){
+      alert("您使用的不是IE浏览器")
+    }
+  }
+</script>
+</body>
+</html>

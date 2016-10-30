@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+</body>
+<script>
+  var username = "1";
+  var passwd = "1";
+  var tel = "1232";
+  /*
+   * 作业要求：检测以上用户名、密码和电话号码，
+   * 如果有一项为空则不能注册，并检测电话号码是否为纯数字，
+   * 如果包含字母则不能注册。
+   */
+//if((/^\d+$/.test(tel))){
+//  if(username == undefined || passwd.length == 0 || tel.length == 0){
+//    alert("不能注册");
+//  }
+//  else{
+//    alert("可以注册");
+//  }
+//}
+//else{
+//  alert("不可以注册");
+//}
+  if(isNaN(tel*1) == false){
+    if(username == undefined || passwd.length == 0 || tel.length == 0){
+      alert("不能注册");
+    }
+    else{
+      alert("可以注册");
+    }
+  }
+  else{
+    alert("不可以注册");
+  }
+</script>
+</html>

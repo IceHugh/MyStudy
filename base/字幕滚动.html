@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--Author:ygz
+    Date:2016/7/4
+-->
+  <meta charset="UTF-8">
+  <title>滚动字幕</title>
+  <style>
+    .box {
+      width: 400px;
+      margin: 0 auto;
+
+      font-size: 20px;
+      font-weight: bold;
+      color: red;
+    }
+    p{
+      text-align: center;
+    }
+    .marquee-up {
+      width: 100%;
+      height: 100px;
+      background: black;
+    }
+    .marquee-down {
+      width: 100%;
+      height: 100px;
+      background: black;
+    }
+  </style>
+</head>
+<body>
+<div class="box">
+  <div class="marquee-up"></div>
+  <marquee direction="up" height="400px">
+    <p>Hello World!</p>
+    <p>Hello HTMl!</p>
+    <p>Hello CSS!</p>
+    <p>Hello JS!</p>
+  </marquee>
+  <div class="marquee-down"></div>
+</div>
+</body>
+</html>

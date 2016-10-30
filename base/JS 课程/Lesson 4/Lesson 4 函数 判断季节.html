@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--Author:ygz
+    Date:2016/7/28
+-->
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+输入月份：<input type="text" id="mon"><br><br>
+<button onclick="onClick()">点击</button>
+当前季节：<input type="text" id="season">
+<script>
+  function onClick(){
+    var mon = document.getElementById('mon').value;
+    var season = document.getElementById('season');
+    if(isNaN(mon*1)){
+      alert("请输入数字");
+    }else{
+      if(parseInt(mon)>=1 && parseInt(mon)<=12){
+        switch(parseInt(mon)){
+          case 1:
+          case 2:
+          case 3:
+            season.value="春季";
+            break;
+          case 4:
+          case 5:
+          case 6:
+            season.value="夏季";
+            break;
+          case 7:
+          case 8:
+          case 9:
+            season.value="秋季";
+            break;
+          case 10:
+          case 11:
+          case 12:
+            season.value="冬季";
+            break;
+        }
+      }else{
+        alert("请输入1-12之间的数字");
+      }
+    }
+  }
+
+</script>
+</body>
+</html>

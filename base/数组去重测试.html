@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--Author:ygz
+      Date:2016/8/12
+  -->
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  var arr =[1,2,6,3,4,1,2,3,1];
+  Array.prototype.unique = function(){
+    var ret = [];
+    var a = {};
+    var len = this.length;
+    for(var i=0;i<len;i++){
+      var v = this[i];
+      if(!a[v]){
+        a[v] = 3;
+        ret.push(v);
+      }
+    }
+    return ret;
+  };
+  console.log(arr.unique())
+</script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--Author:ygz
+    Date:2016/7/26
+-->
+  <meta charset="UTF-8">
+  <title>Title</title>
+
+</head>
+<body>
+  选择机票：
+  <select name="ticket" id="ticket">
+    <option>4000</option>
+    <option>3000</option>
+    <option>2000</option>
+  </select>
+  <br><br>
+  输入月份：
+  <input type="text" id="mon"><br><br>
+  选择舱位：
+  <select name="cabin" id="cabin">
+    <option>头等舱</option>
+    <option>经济舱</option>
+  </select>
+  <br><br><button onclick="onClick()">提交</button><br><br>
+  实付价格：<input type="text" id="price">
+  <script>
+    function onClick() {
+      var month = document.getElementById("mon").value; //获取到的是一个string类型
+      var price = document.getElementById("ticket").value;
+      var cabin = document.getElementById("cabin").value;
+      /*switch(parseInt(month)){  //switch比较的是一个数字
+        case 1:
+        case 2:
+        case 3:
+          switch(cabin){
+            case "头等舱":
+              document.getElementById("price").value= price*.6;
+              break;
+            case "经济舱":
+              document.getElementById("price").value= price*.3;
+              break;
+          }
+          break;
+        case 4:
+        case 5:
+        case 6:
+        case 7:
+        case 8:
+        case 9:
+        case 10:
+        case 11:
+        case 12:
+          switch(cabin){
+            case "头等舱":
+              document.getElementById("price").value= price*.9;
+              break;
+            case "经济舱":
+              document.getElementById("price").value= price*.75;
+              break;
+          }
+      }*/
+      if(parseInt(month)<=3){
+        if(cabin == "头等舱"){
+          document.getElementById("price").value= price*.6;
+        }
+        else{
+          document.getElementById("price").value= price*.3;
+        }
+      }
+      else{
+        if(cabin == "头等舱"){
+          document.getElementById("price").value= price*.9;
+        }
+        else{
+          document.getElementById("price").value= price*.75;
+        }
+      }
+    }
+  </script>
+</body>
+</html>

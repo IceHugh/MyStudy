@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--Author:ygz
+    Date:2016/7/27
+-->
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  var x = 0;
+  var s = 0;   //设定一个初始值s=0;
+/*for(var i=0;i<=50;i++){  //先执行，在自加
+  x = i*2;
+ s += x;
+}*/
+for(var i=0;i<=100;i += 2){  //先执行，在自加
+  s += i;
+}
+
+  document.write("100以内的偶数和:"+s)
+</script>
+</body>
+</html>

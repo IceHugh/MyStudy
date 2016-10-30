@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--Author:ygz
+    Date:2016/7/29
+-->
+  <meta charset="UTF-8">
+  <title>检查邮箱地址</title>
+</head>
+<body>
+输入邮箱：<input type="text"><button  onclick="review()"> 检查邮箱</button>
+<script>
+  function review(){
+    var gE = document.getElementsByTagName("input")[0].value;
+    var ln = gE.length;
+    var gA = gE.indexOf("@");
+    var gD = gE.lastIndexOf(".");
+    if(gA>=0 && gA == gE.lastIndexOf("@")){
+      if(gA>0 && gA<ln-1){
+        if(gD>gA){
+          if(gD == ln-3 || gD == ln-4){
+            alert("邮箱正确")
+          }
+        }
+      }
+    }else{
+      alert("请输入正确的邮箱")
+    }
+  }
+</script>
+</body>
+</html>

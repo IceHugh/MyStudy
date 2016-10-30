@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--Author:ygz
+    Date:2016/7/28
+-->
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    input{
+      outline: none;
+    }
+    span{
+      visibility :hidden;
+    }
+
+  </style>
+</head>
+<body>
+<p><input type="text"><span> *</span></p>
+<p><input type="text"><span> *</span></p>
+<p><input type="text"><span> *</span></p>
+<p><input type="text"><span> *</span></p>
+<p><input type="text"><span> *</span></p>
+<script>
+  window.onload=function(){
+    HeightLight();
+    HeightRed();
+  };
+  function HeightLight() {
+    var oInp = document.getElementsByTagName("input");
+    for (var i = 0; i < oInp.length; i++) {
+      oInp[i].onmouseover = function(){
+        this.style.borderColor = "red";
+      };
+      oInp[i].onmouseout = function(){
+        this.style.borderColor = "initial";
+      };
+    }
+  }
+  /*function HeightRed() {
+//    var oP = document.querySelector("p");
+    var oInp = document.getElementsByTagName("input");
+    for(var i=0;i<oInp.length;i++){
+      if(oInp[i].value == ""){
+        oInp[i].onblur = function(){
+          var newA = document.createElement('span');
+           newA.innerHTML= " *";
+           newA.style.color="red";
+          this.parentNode.appendChild(newA);
+        };
+        oInp[i].onfocus = function(){
+          var allNode = this.parentNode.childNodes;
+          if(allNode.length>1){
+            this.parentNode.removeChild(this.parentNode.childNodes[1]);
+          }
+        }
+      }
+    }
+  }*/
+  function HeightRed() {
+    var oInp = document.getElementsByTagName("input");
+    var oRed = document.getElementsByTagName("span");
+    for(var i=0;i<oInp.length;i++){
+      oInp[i].index = i;
+      oInp[i].onblur = function(){
+        if(this.value == ""){
+          oRed[this.index].style.visibility = "visible";
+          oRed[this.index].style.color = "red";
+        }else{
+          oRed[this.index].style.visibility = "hidden";
+        }
+      };
+      oInp[i].onfocus = function(){
+        oRed[this.index].style.visibility = "hidden";
+      };
+    }
+  }
+</script>
+</body>
+</html>

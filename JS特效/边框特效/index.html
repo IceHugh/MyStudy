@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--Author:ygz
+      Date:2016/8/22
+  -->
+    <meta charset="UTF-8">
+    <title>边框特效</title>
+    <style>
+        #wrap {
+            width: 200px;
+            height: 200px;
+            margin: 200px auto;
+            position: relative;
+        }
+        img {
+            display: block;
+            width: 200px;
+            height: 200px;
+            border: 0;
+            background-color: red;
+        }
+        /*#wrap div {
+            background-color: blue;
+            position: absolute;
+        }
+        #left { left: 0; top: 3px;width: 3px;height: 0;opacity: 0 }
+        #bottom { left: 0; bottom: 0;width: 0;height: 3px;opacity: 0 }
+        #right { right: 0; bottom: 0;width: 3px;height: 0;opacity: 0 }
+        #top { right: 0; top: 0;width: 0;height: 3px;opacity: 0 }*/
+        p{
+            width: 200px;
+            line-height: 40px;
+            margin: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(0,0,0,.5);
+            display: none;
+            text-align: center;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+<div id="wrap">
+    <p class="title">这是一个图片</p>
+    <img src="images/team-1.jpg" alt="no see">
+</div>
+<script src="js/jquery-3.1.0.min.js"></script>
+<script>
+    /*$("#wrap").hover(
+        function() {
+            var _this = this;
+            $("#left,#right", _this).stop(true).animate({height: "100%",opacity: 1}, 100);
+            $("#top,#bottom",_this).stop(true).delay(100).animate({width: "100%",opacity: 1}, 100);
+            $("p").stop().slideDown();
+        },
+        function(){
+            var _this = this;
+            $("#top,#bottom",_this).stop(true).animate({ width: "0",opacity: 0},50);
+            $("#left,#right",_this).stop(true).delay(100).animate({ height: "0",opacity: 0},50);
+            $("p").stop().slideUp();
+        }
+    );*/
+    $("#wrap").hover(function(){
+        $("p").stop().slideDown();
+    },function(){
+        $("p").stop().slideUp();
+    });
+    hoverStripe("#wrap",2,1000);
+    function hoverStripe(obj,ply,speed){
+        $(obj).css("position","relative");
+        $(obj).hover(
+                function() {
+                    var _rgba = rgba();
+                    $("<div></div>").attr("class","left stripe").css({
+                        position: "absolute",
+                        backgroundColor: _rgba,
+                        left: "-"+ply+"px",
+                        top: "0",
+                        width: +ply+"px",
+                        height: "0",
+                        opacity: "0"
+                    }).appendTo($(obj));
+                    $("<div></div>").attr("class","bottom stripe").css({
+                        position: "absolute",
+                        backgroundColor: _rgba,
+                        left: "0",
+                        bottom: "-"+ply+"px",
+                        width: "0",
+                        height: +ply+"px",
+                        opacity: "0"
+                    }).appendTo($(obj));
+                    $("<div></div>").attr("class","right stripe").css({
+                        position: "absolute",
+                        backgroundColor: _rgba,
+                        right: "-"+ply+"px",
+                        bottom: "0",
+                        width: +ply+"px",
+                        height: "0",
+                        opacity: "0"
+                    }).appendTo($(obj));
+                    $("<div></div>").attr("class","top stripe").css({
+                        position: "absolute",
+                        backgroundColor: _rgba,
+                        right: "0",
+                        top: "-"+ply+"px",
+                        width: "0",
+                        height: +ply+"px",
+                        opacity: "0"
+                    }).appendTo($(obj));
+                    var _this = this;
+                    $(".left,.right", _this).stop(true).animate({height: $(obj).height()+ply+"px",opacity: 1},speed);
+                    $(".top,.bottom",_this).stop(true).delay(100).animate({width: $(obj).width()+ply+"px",opacity: 1},speed);
+                },
+                function(){
+                    var _this = this;
+                    $(".top,.bottom",_this).stop(true).animate({ width:"0",opacity: 0},speed/2);
+                    $(".left,.right",_this).stop(true).delay(100).animate({ height: "0",opacity: 0},speed/2,function(){
+                        $(obj).find(".stripe").remove();
+                    });
+                }
+        );
+        function rgba(){
+            var r = Math.round(Math.random()*255);
+            var g = Math.round(Math.random()*255);
+            var b = Math.round(Math.random()*255);
+            var a = (Math.random()*.7+.3).toFixed(2);
+            return "rgba("+r+","+g+","+b+","+a+")";
+//            return "rgba(0,0,0,.5)"
+        }
+    }
+
+
+</script>
+</body>
+</html>

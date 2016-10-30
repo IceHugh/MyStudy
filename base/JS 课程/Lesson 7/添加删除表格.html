@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--Author:ygz
+      Date:2016/8/4
+  -->
+  <meta charset="UTF-8">
+  <title>天假删除表格</title>
+  <style>
+    table {
+      border-collapse: collapse;
+    }
+    table th,table td{
+      width: 200px;
+      height: 25px;
+    }
+    input {
+      width: 170px;
+    }
+    table tr:first-of-type{
+      color: blue;
+      background: #ccc;
+    }
+  </style>
+</head>
+<body>
+<form action="#">
+  <table border="1">
+      <tr>
+        <th>学校</th>
+        <th>开始时间</th>
+        <th>结束时间</th>
+      </tr>
+      <tr>
+        <td><input type="text"></td>
+        <td><input type="text"></td>
+        <td><input type="text"></td>
+      </tr>
+</table>
+  <p><button onclick="addRows()">添加一条</button></p>
+  <p><button>全部提交</button></p>
+</form>
+<script>
+  var oTable = document.getElementsByTagName("table")[0];
+  function addRows(){
+    var oTr = document.createElement("tr");
+    var oTd = document.createElement("td");
+    oTd.innerHTML = "<input type='text'>";
+    oTr.appendChild(oTd);
+
+    var oTd = document.createElement("td");
+    oTd.innerHTML = "<input type='text'>";
+    oTr.appendChild(oTd);
+
+    var oTd = document.createElement("td");
+    oTd.innerHTML = "<input type='text'>";
+    oTr.appendChild(oTd);
+
+    var oTd = document.createElement("td");
+    oTd.style.width="50px";
+    oTd.innerHTML= "<a href='javascript:;' onclick='deleteRow(this);'>删除</a>";
+    oTr.appendChild(oTd);
+    oTable.lastChild.appendChild(oTr);
+    if(oTable.lastChild.firstChild.childNodes.length == 7){
+      var dTh  = document.createElement("th");
+      dTh.style.width="50px";
+      dTh.innerHTML = "操作";
+      oTable.lastChild.firstChild.appendChild(dTh);
+
+      var dTh  = document.createElement("td");
+      dTh.style.width="50px";
+      oTable.lastChild.childNodes[2].appendChild(dTh);
+    }
+  }
+  function deleteRow(obj){
+    obj.parentNode.parentNode.parentNode.removeChild(obj.parentNode.parentNode);
+  }
+</script>
+</body>
+</html>

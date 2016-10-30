@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--Author:ygz
+    Date:2016/7/27
+-->
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  //爱因斯坦的数学题：有一条长阶梯，若每步跨2阶，则最后剩一阶；若每步跨3阶，则最后剩2阶；若每步跨5阶，则最后剩4阶，若每步跨6阶，最后剩5阶。只有每次跨7阶，最后才正好一阶不剩。求这条阶梯共有多少阶。
+//for(var y=1;y%2==1 && y%3==2 && y%5==4 && y%6==5 && y%7==0;y++){
+//    document.write(y);
+//}
+  for(var y=1;;y++)
+  if((y%2==1) && (y%3==2) && (y%4==3) &&(y%5==4) && (y%6==5) && (y%7==0)){
+    document.write(y+"<br>");
+    break;   //不加break,进入死循环
+  }
+</script>
+</body>
+</html>

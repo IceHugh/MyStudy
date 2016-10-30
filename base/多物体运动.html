@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--Author:ygz
+      Date:2016/8/10
+  -->
+  <meta charset="UTF-8">
+  <title>多物体运动</title>
+  <style>
+    *{margin: 0; padding: 0}
+    ul li{
+      list-style: none;
+      width: 200px;
+      height: 100px;
+      background: yellow;
+      margin-bottom: 20px;
+      border: 4px solid #ccc;
+      filter: alpha(opacity: 30);
+      opacity: .3;
+    }
+  </style>
+</head>
+<body>
+<ul>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
+<script>
+  window.onload = function() {
+    var aLi = document.getElementsByTagName("li");
+    aLi[0].onmouseover = function () {
+      startMove(this, {height: 400, width: 400});
+    };
+    aLi[0].onmouseout = function () {
+      startMove(this, {height: 100, width: 200});
+    };
+    function startMove(obj, json, fn) {
+      var flag = true;
+      clearInterval(obj.timer);
+      obj.timer = setInterval(function () {
+        for (var attr in json) {
+          var icur = 0;
+          if (attr == "opacity") {
+            icur = Math.round(parseFloat(getStyle(obj, attr)) * 100);
+          } else {
+            icur = parseInt(getStyle(obj, attr));
+          }
+          var speed = (json[attr] - icur) / 8;
+          speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
+          if (icur != json[attr])  flag = false;
+          if (attr == "opacity") {
+            obj.style.filter = 'alpha(opacity:' + icur + speed + ')';
+            obj.style.opacity = (icur + speed) / 100;
+          } else {
+            obj.style[attr] = icur + speed + "px";
+          }
+        }
+        if(flag){
+          clearInterval(obj.timer);
+          if (fn) {
+            fn();
+          }
+        }
+      }, 30)
+    }
+
+    function getStyle(obj, attr) {
+      if (obj.currentStyle) {
+        return obj.currentStyle[attr];    //ie
+      } else {
+        return getComputedStyle(obj, false)[attr];   //firefox
+      }
+    }
+  }
+</script>
+</body>
+</html>

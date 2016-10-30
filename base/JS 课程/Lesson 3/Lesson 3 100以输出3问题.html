@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--Author:ygz
+    Date:2016/7/27
+-->
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  for(var i=1;i<=100;i++) {
+     if(i%3 == 0&&i%5 == 0){
+      document.write("FilpFlop"+"<br>");
+      continue;
+      }
+      if(i%3 == 0){
+        document.write("Filp"+"<br>");
+        continue;
+      }
+      if(i%5 == 0){
+        document.write("Flop"+"<br>");
+        continue;
+      }
+    document.write(i+"<br>");
+      /*    var a=i;
+      if(i%3==0){
+        if(i%5==0){
+          i = "FlipFlop";
+        }
+        else{
+          i = "Flip";
+        }
+      }
+      else if(i%5 == 0){
+        i = "Flop"
+      }
+      document.write(i+"<br>");
+      i=a;
+    }*/
+  }
+
+</script>
+</body>
+</html>

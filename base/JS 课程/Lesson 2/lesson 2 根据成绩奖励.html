@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--Author:ygz
+    Date:2016/7/26
+-->
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script>
+  function onClick(){
+  var score = document.getElementById("score").value;
+  if(score>90){
+  alert("获得iPhone6一步");
+  }else{
+  alert("手写代码100遍");
+  }
+  }
+</script>
+</head>
+<body>
+<div>
+考试成绩：<input type="text" id="score"><button onclick="onClick()">点击查看奖励</button>
+</html>

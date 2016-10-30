@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--Author:ygz
+    Date:2016/7/27
+-->
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  //求个位数是6，且能被三整除的五位数共有多少个。
+  var z = 0;
+  for(var i=0;i<=8999;i++){
+    var x = 10006;
+    x =x+i*10;
+    if(x%3 == 0){
+      z++
+    }
+  }
+  document.write(z);
+/*  var x = 1000;
+  var z = 0;
+  while(x<=9999){
+    var y =x*10+6;
+    if(y%3==0){
+      z++
+    }
+    x++;
+  }
+  document.write(z)*/
+</script>
+</body>
+</html>

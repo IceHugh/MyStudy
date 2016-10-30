@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--Author:ygz
+      Date:2016/8/10
+  -->
+  <meta charset="UTF-8">
+  <title>纯js实现旋转木马轮播图</title>
+  <style>
+    #show{
+      position: relative;
+      width: 800px;
+      height: 600px;
+      margin: 20px auto;
+      border: 1px solid #ccc;
+    }
+    .item{
+      width: 60px;
+      height: 40px;
+      position: absolute;
+      background: #eee;
+      border: 1px solid #ddd;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+<input type="button" id="l" value="l">
+<input type="button" id="r" value="r">
+  <div id="show">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+    <div class="item">7</div>
+    <div class="item">8</div>
+    <div class="item">9</div>
+    <div class="item">0</div>
+    <div class="item">a</div>
+    <div class="item">b</div>
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+  </div>
+<script>
+  var len;
+  var showerObj;
+  var listObj;
+  var showerWidth = 800;
+  var showerHeight = 400;
+  var r;
+  var cR = 0;
+  var ccR = 0;
+  var timer = 0;
+  window.onload = function(){
+    showerObj = document.getElementById("show");
+    listObj = showerObj.getElementsByTagName("div");
+    len = listObj.length;
+    r = Math.PI/180*360/len;
+    for(var i=0;i<len;i++){
+      var item = listObj[i];
+      item.style.top = showerHeight/2+Math.sin(r*i)*showerWidth/2-20+"px";
+      item.style.left = showerWidth/2+Math.cos(r*i)*showerWidth/2-30+"px";
+      item.rotate = (r*i+2*Math.PI)%(2*Math.PI);
+      /*item.onclick = function(){
+        cR = Math.PI/2-this.rotate;
+        timer || (timer = setInterval(rotate,10))
+      }*/
+    }
+    var rotate = function(){
+      ccR = (ccR+2*Math.PI)%(2*Math.PI);
+      if(cR-ccR<0) cR = cR + 2*Math.PI;
+      if(cR-ccR<Math.PI){
+        ccR = ccR+(cR-ccR)/19;
+      }else{
+        ccR = ccR-(2*Math.PI+ccR-cR)/19;
+      }
+
+      if(Math.abs((cR+2*Math.PI)%(2*Math.PI))-(ccR+2*Math.PI)%(2*Math.PI)<Math.PI/720){
+        ccR = cR;
+        clearInterval(timer);
+        timer = null;
+      }
+      for(var i=0;i<len;i++){
+        var item = listObj[i];
+        var w,h;
+        var sinR = Math.sin(r*i+ccR);
+        var cosR = Math.cos(r*i+ccR);
+        w = 60+.6*60*sinR;
+        h = (40+.6*40*sinR);
+        item.style.cssText +=";width:"+w+"px;height:"+h+"px;top:"+parseInt(showerHeight/2+sinR*showerWidth/2/3-w/2)+"px;left:"+parseInt(showerWidth/2+cosR*showerWidth/2-h/2)+"px;z-index:"+parseInt(showerHeight/2+sinR*showerWidth/2/3-w/2)+";";
+      }
+    };
+    document.getElementById("l").onclick = function(){
+      cR = (cR+r+2*Math.PI)%(2*Math.PI);
+      timer || (timer =setInterval(rotate,10));
+    };
+    document.getElementById("r").onclick = function(){
+      cR = (cR-r+2*Math.PI)%(2*Math.PI);
+      timer || (timer =setInterval(rotate,10));
+    };
+    rotate();
+  }
+</script>
+</body>
+</html>

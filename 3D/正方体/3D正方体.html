@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--Author:ygz
+    Date:2016/7/20
+-->
+	<meta charset="UTF-8">
+	<title>正方体</title>
+	<style>
+		.state{
+			width: 800px;
+			height: 800px;
+			perspective-origin: center center;
+			transform-style: preserve-3d;
+			position: relative;
+			margin: 200px auto;
+			animation: rotate 3s linear -0.5s infinite running;
+		}
+		.state>div {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin: -100px 0 0 -100px;
+			width: 200px;
+			height: 200px;
+			font-size: 50px;
+			text-align: center;
+			line-height: 200px;
+			color: #000;
+		}
+		.top{ background: rgba(255,0,0,.5);transform: rotateX(-90deg) translateZ(-100px)  }
+		.bottom{ background: rgba(0,255,0,.5);transform: rotateX(90deg) translateZ(-100px)  }
+		.left{ background: rgba(0,0,255,.5);transform: rotateY(90deg) translateZ(-100px)  }
+		.right{ background: rgba(255,255,0,.5);transform: rotateY(-90deg) translateZ(-100px)  }
+		.front{ background: rgba(255,0,255,.5);transform: translateZ(100px)  }
+		.back{ background: rgba(0,255,255,0.5);transform: rotateX(180deg) translateZ(100px) }
+		@keyframes rotate {
+			0%{transform: rotate3d(1,1,1,0deg)}
+			25%{transform: rotate3d(0,1,1,90deg)}
+			50%{transform: rotate3d(1,1,0,270deg)}
+			75%{transform: rotate3d(1,0,1,180deg)}
+			99%{transform: rotate3d(1,1,1,360deg)}
+			100%{transform: rotate3d(1,1,1,360deg)}
+		}
+	</style>
+</head>
+<body>
+	<div class="state">
+		<div class="top">1</div>
+		<div class="bottom">2</div>
+		<div class="left">3</div>
+		<div class="right">4</div>
+		<div class="front">5</div>
+		<div class="back">6</div>
+	</div>
+</body>
+</html>

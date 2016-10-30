@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--Author:ygz
+    Date:2016/7/27
+-->
+	<meta charset="UTF-8">
+	<title>事件流</title>
+</head>
+<body>
+<div id="box">
+	<input type="button" id="btn" value="按钮" onclick="showMessage()">
+	<input type="button" id="btn2" value="按钮2" >
+	<input type="button" id="btn3" value="按钮3" >
+</div>
+<script>
+	function showMessage(event){
+		event = event ||window.event;
+		var ele = event.target || event.srcElement;
+		alert(ele);
+    eventUtil.stopPropagation(event);
+	}
+	function showBox(){
+		alert("事件冒泡");
+
+	}
+	var btn2 = document.getElementById("btn2");
+	var btn3 = document.getElementById("btn3");
+	var box = document.getElementById("box");
+	/*btn2.onclick = function(){
+		alert("DOM0级事件处理程序");
+	};*/
+	btn2.onclick = showMessage;
+	//btn2.onclick = null; //删除事件
+
+	/*btn3.addEventListener("mouseout",function(){
+		this.style.color="red";
+	},false);
+	btn3.addEventListener("click",showMessage,false);
+	//删除事件，只有通过下面的属性,
+  //btn3.removeEventListener("click",showMessage,false);
+
+	//ie事件处理程序
+	btn3.attachEvent('onclick',showMessage);
+	btn3.detachEvent('onclick',showMessage);*/
+
+	//跨浏览器事件处理程序,把添加事件和删除方法封装到一个对象当中
+	var eventUtil={
+		//添加句柄
+		addHandler:function(element,type,handler){
+				if(element.addEventListener){
+					element.addEventListener(type,handler,false);
+				}
+				else if(element.attachEvent){
+					element.attachEvent("on"+type,handler);
+				}
+				else{
+					element["on"+type]=handler;
+				}
+		},//对象里面间隔使用，
+		//删除句柄
+		removeHandler:function(element,type,handler){
+			if(element.removeEventListener){
+				element.removeEventListener(type,handler,false);
+			}
+			else if(element.detachEvent){
+				element.detachEvent("on"+type,handler);
+			}
+			else{
+				element["on"+type]=null;
+			}
+		},
+		getEvent:function(event){
+			return event?event:window.event;
+		},
+		getElement:function(event){
+			return event.target || event.srcElement;
+		},
+		preventDefalute:function(event){
+			if(event.prevenDefalute){
+				event.preventDefalute();
+			}else{
+				event.returnValue=false;
+			}
+		},
+		stopPropagation:function(event){
+			if(event.stopPropagation){
+				event.stopPropagation();
+			}else{
+				event.cancelBubble=true;
+			}
+		}
+
+	};
+	eventUtil.addHandler(box,'click',showBox);
+
+</script>
+</body>
+</html>

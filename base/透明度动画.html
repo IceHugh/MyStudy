@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--Author:ygz
+      Date:2016/8/10
+  -->
+  <meta charset="UTF-8">
+  <title>透明度动画</title>
+  <style>
+    div{
+      width: 200px;
+      height: 200px;
+      background: red;
+      filter:alpha(opacity: 30);
+      opacity: .3;
+      margin: 0 20px;
+      float: left;
+    }
+  </style>
+</head>
+<body>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<script>
+  window.onload=function(){
+    var oDiv = document.getElementsByTagName("div");
+    for(var i=0,len=oDiv.length;i<len;i++){
+      oDiv[i].alpha = 30;
+      oDiv[i].onmouseover = function(){
+        startMove(this,100);
+      };
+      oDiv[i].onmouseout = function(){
+        startMove(this,30);
+      };
+    }
+  };
+  function startMove(obj,iTarget){
+    clearInterval(obj.timer);
+    obj.timer = setInterval(function(){
+      var speed = 0;
+      if(obj.alpha > iTarget){
+        speed = -10;
+      }else{
+        speed = 10;
+      }
+      if(obj.alpha == iTarget){
+        clearInterval(obj.timer);
+      }else{
+        obj.alpha += speed;
+        obj.style.filter = 'alpha(opacity:'+obj.alpha+')';
+        obj.style.opacity = obj.alpha/100;
+      }
+    },30);
+  }
+</script>
+</body>
+</html>

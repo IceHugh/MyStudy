@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--Author:ygz
+    Date:2016/7/26
+-->
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  var a=20;
+  var b=888;
+  var c;
+  if(b>0 && b <= 999 && a>0 && a<=31){
+    if(b<=9){
+      c=a*10+b;
+    }
+    else if(b<=99){
+      c=a*100+b;
+    }
+    else{
+      c=a*1000+b;
+    }
+  }
+  document.write(c);
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+名次为：
+<select id="rank">
+  <option>第一</option>
+  <option>第二</option>
+  <option>第三</option>
+  <option>之外</option>
+  </select><br/>
+    <input type="button" onclick="award()" value="奖励为：">
+    <input type="text" id="award" value="奖励iPhone6S一台">
+    <script>
+      function award() {
+        var rank = document.getElementById("rank").value;
+        switch (rank) {
+          case "第一":
+            document.getElementById("award").value = ("奖励iPhone6S一台");
+            break;
+          case "第二":
+            document.getElementById("award").value = ("奖励iPad-mini一台");
+            break;
+          case "第三":
+            document.getElementById("award").value = ("奖励移动硬盘一个");
+            break;
+          case "之外":
+            document.getElementById("award").value = ("无任何奖励");
+            break;
+        }
+      }
+    </script>
+</body>
+</html>
