@@ -1,0 +1,11 @@
+{
+  "name": "lesson4",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^0.22.0",
+    "eventproxy": "^0.3.5",
+    "superagent": "^2.3.0"
+  }
+}

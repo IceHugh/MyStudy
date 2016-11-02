@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>React-test3</title>
+    <script src="build/react.js"></script>
+    <script src="build/react-dom.js"></script>
+    <script src="build/browser.min.js"></script>
+</head>
+
+<body>
+    <div id="content"></div>
+    <script type="text/babel">
+        var HelloMessage = React.createClass({
+            getDefaultProps : function(){
+                return {name: "hugh"}
+            },
+            propTypes : {
+                title : React.PropTypes.string.isRequired
+            },
+            render : function(){
+                return <div><h1>Hello,{this.props.title}!</h1><h2>Hello,{this.props.name}</h2></div>
+            }
+        });
+        var data = 123;
+        ReactDOM.render(
+        <HelloMessage title={data}>
+        </HelloMessage>,
+        document.getElementById("content")
+        )
+    </script>
+    <!-- propTypes错误会提示，但是不会影响渲染 -->
+</body>
+
+</html>

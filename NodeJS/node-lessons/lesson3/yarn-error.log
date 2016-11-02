@@ -1,0 +1,44 @@
+Arguments: 
+  /usr/local/Cellar/node/6.8.1/bin/node /usr/local/bin/yarn add express superagent cheerio --save
+
+PATH: 
+  /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+
+Yarn version: 
+  0.16.1
+
+Node version: 
+  6.8.1
+
+Platform: 
+  darwin x64
+
+npm manifest: 
+  {
+    "name": "lesson3",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+bower manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  TypeError: Cannot use 'in' operator to search for 'latest' in undefined
+      at /usr/local/lib/node_modules/yarn/lib/resolvers/registries/npm-resolver.js:62:24
+      at next (native)
+      at step (/usr/local/lib/node_modules/yarn/node_modules/babel-runtime/helpers/asyncToGenerator.js:17:30)
+      at /usr/local/lib/node_modules/yarn/node_modules/babel-runtime/helpers/asyncToGenerator.js:35:14
+      at Promise.F (/usr/local/lib/node_modules/yarn/node_modules/core-js/library/modules/_export.js:35:28)
+      at /usr/local/lib/node_modules/yarn/node_modules/babel-runtime/helpers/asyncToGenerator.js:14:12
+      at Function.findVersionInRegistryResponse (/usr/local/lib/node_modules/yarn/lib/resolvers/registries/npm-resolver.js:72:7)
+      at /usr/local/lib/node_modules/yarn/lib/resolvers/registries/npm-resolver.js:89:34
+      at next (native)
+      at step (/usr/local/lib/node_modules/yarn/node_modules/babel-runtime/helpers/asyncToGenerator.js:17:30)
