@@ -1,0 +1,552 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"funtion",
+				"function with name"
+			],
+			[
+				"function",
+				"function without name"
+			],
+			[
+				"func",
+				"function with name"
+			],
+			[
+				"fun",
+				"function without name"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"textal",
+				"text-align"
+			],
+			[
+				"no",
+				"no-repeat"
+			],
+			[
+				"over",
+				"overflow-y"
+			],
+			[
+				"img",
+				"img_w3slogo.gif\tw:150 h:28"
+			],
+			[
+				"style",
+				"style\tTag"
+			],
+			[
+				"cons",
+				"console"
+			],
+			[
+				"a",
+				"a\t<a>"
+			],
+			[
+				"last",
+				"lastGist"
+			],
+			[
+				"lastG",
+				"lastGistUrl"
+			],
+			[
+				"My",
+				"MyTextInput"
+			],
+			[
+				"ol",
+				"ol\tTag"
+			],
+			[
+				"script",
+				"script\tTag"
+			],
+			[
+				"share-ti",
+				"share-title.png\tw:545 h:229"
+			],
+			[
+				"share-t",
+				"share-title.png\tw:545 h:229"
+			],
+			[
+				"listy",
+				"list-style-type"
+			],
+			[
+				"Nes",
+				"NewsList.js"
+			],
+			[
+				"News",
+				"NewsHeader"
+			],
+			[
+				"N",
+				"NewsItem.js"
+			],
+			[
+				"html",
+				"html5\tSimple HTML5 Boilerplate"
+			],
+			[
+				"sytle",
+				"style\tTag"
+			],
+			[
+				"for",
+				"for\tfor (…) {…}"
+			],
+			[
+				"load",
+				"load\t.load()"
+			],
+			[
+				"calc",
+				"calc()"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 342.0,
+		"last_filter": "pic",
+		"selected_items":
+		[
+			[
+				"pic",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"ssjs",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"au",
+				"Autoprefix CSS"
+			]
+		],
+		"width": 575.0
+	},
+	"console":
+	{
+		"height": 138.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/hugh/Github/MyStudy/Canvas/交互效果/utils.js",
+		"/Users/hugh/Github/MyStudy/Canvas/交互效果/Github.sublime-project",
+		"/Users/hugh/web/personal/元素缩放移动测试.html",
+		"/Users/hugh/project/20161102/drag-animate/client/css/main.css",
+		"/Users/hugh/project/20161102/drag-animate/client/js/elMove.js",
+		"/Users/hugh/project/20161102/drag-animate/server/views/index.html",
+		"/Users/hugh/project/20161102/drag-animate/server/views/_inc/layout.html",
+		"/Users/hugh/project/20161027/Taizhou-yunying/dm/choujiang/js/index.js",
+		"/Users/hugh/project/20161102/drag-animate/client/css/common.css",
+		"/Users/hugh/project/20161102/drag-animate/client/css/aside.css",
+		"/Users/hugh/project/20161102/drag-animate/server/views/_inc/aside.html",
+		"/Users/hugh/project/20161102/drag-animate/server/views/_inc/head.html",
+		"/Users/hugh/project/20161102/drag-animate/client/css/head.css",
+		"/Users/hugh/project/20161102/drag-animate/server/views/_inc/preview.html",
+		"/Users/hugh/project/20161102/drag-animate/client/css/preview.css",
+		"/Users/hugh/project/20161027/Taizhou-yunying/dm/choujiang/css/sharedown.css",
+		"/Users/hugh/project/20161027/Taizhou-yunying/dm/choujiang/sharedown.html",
+		"/Users/hugh/project/20161102/drag-animate/server/views/_inc/meta.html",
+		"/Users/hugh/Github/MyStudy/H5/图片拖拽.html",
+		"/Users/hugh/Github/MyStudy/H5/test1.html",
+		"/Users/hugh/Github/MyStudy/NodeJS/node-lessons/lesson5/app.js",
+		"/Users/hugh/Github/MyStudy/NodeJS/node-lessons/lesson4/app.js",
+		"/Users/hugh/Github/MyStudy/NodeJS/node-lessons/lesson3/app.js",
+		"/Users/hugh/web/github/node-lessons/lesson4/app.js",
+		"/Users/hugh/Github/MyStudy/NodeJS/node-lessons/lesson4/demo.js",
+		"/Users/hugh/Github/MyStudy/NodeJS/node-lessons/lseeon2/app.js",
+		"/Users/hugh/Github/MyStudy/NodeJS/node-lessons/lesson3/package.json",
+		"/Users/hugh/Github/MyStudy/NodeJS/node-lessons/lesson1/app.js",
+		"/Users/hugh/Gitlab/H5standard/app/demo/js/docs/vendor.js",
+		"/Users/hugh/Gitlab/H5standard/app/components/js/slider/main.js",
+		"/Users/hugh/Gitlab/H5standard/app/demo/js/docs/base.js",
+		"/Users/hugh/Gitlab/H5standard/app/demo/html/docs/base.html",
+		"/Users/hugh/Gitlab/H5standard/app/demo/html/demos/date.html",
+		"/Users/hugh/Gitlab/H5standard/app/demo/html/_inc/demo-layout.html",
+		"/Users/hugh/Gitlab/H5standard/app/components/js/scratchcard/main.js",
+		"/Users/hugh/Gitlab/H5standard/app/demo/html/_inc/docs-header.html",
+		"/Users/hugh/Gitlab/H5standard/app/components/_inc/layout.html",
+		"/Users/hugh/Gitlab/H5standard/configs.js",
+		"/Users/hugh/Gitlab/H5standard/server/webpack.config.js",
+		"/Users/hugh/Gitlab/H5standard/app/components/scss/text/texts.scss",
+		"/Users/hugh/Gitlab/H5standard/server.js",
+		"/Users/hugh/Gitlab/H5standard/app/demo/html/demos/button.html",
+		"/Users/hugh/Gitlab/H5standard/node_modules/webpack-dev-middleware/middleware.js",
+		"/Users/hugh/web/github/webpack-demos/node_modules/webpack-dev-middleware/middleware.js",
+		"/Users/hugh/Gitlab/H5standard/build-config.js",
+		"/Users/hugh/Gitlab/H5standard/app/components/_inc/meta.html",
+		"/Users/hugh/Gitlab/H5standard/app/demo/html/_inc/layout.html",
+		"/Users/hugh/Gitlab/H5standard/app/components/libs/flexible.js",
+		"/Users/hugh/Gitlab/H5standard/app/components/scss/layout/_common.scss",
+		"/Users/hugh/Gitlab/H5standard/app/components/scss/label/labels.scss",
+		"/Users/hugh/Gitlab/H5standard/app/components/scss/layout/_variables.scss",
+		"/Users/hugh/Gitlab/H5standard/yarn.lock",
+		"/Users/hugh/Gitlab/H5standard/server/backup.js",
+		"/Users/hugh/Gitlab/H5standard/server/utils.js",
+		"/Users/hugh/Gitlab/H5standard/server/route.dev.js",
+		"/Users/hugh/Gitlab/H5standard/app/demo/html/index.html",
+		"/Users/hugh/Gitlab/H5standard/app/demo/html/home/index.html",
+		"/Users/hugh/web/pa-case/YunYing/_dev/modules/vendor.js",
+		"/Users/hugh/Gitlab/H5standard/node_modules/nunjucks/browser/nunjucks.js",
+		"/Users/hugh/web/github/webpack-demos/demo16/index.html",
+		"/Users/hugh/project/20161027/Taizhou-yunying/dm/choujiang/js/sharedown.js",
+		"/Users/hugh/Github/MyStudy/ReactJS/react-test/test12.html",
+		"/Users/hugh/Github/MyStudy/ReactJS/react-test/test11.html",
+		"/Users/hugh/Github/MyStudy/ReactJS/react-test/test10.html",
+		"/Users/hugh/project/20161027/Taizhou-yunying/dm/choujiang/js/main.js",
+		"/Users/hugh/web/personal/studyReact/react-test/test9.html",
+		"/Users/hugh/project/20161027/Taizhou-yunying/dm/choujiang/images/icon-th-share.png",
+		"/Users/hugh/web/personal/studyReact/react-test/test8.html",
+		"/Users/hugh/web/personal/studyReact/react-test/test7.html",
+		"/Users/hugh/web/personal/studyReact/react-test/test6.html",
+		"/Users/hugh/web/personal/studyReact/react-test/test5.html",
+		"/Users/hugh/web/personal/studyReact/react-test/test4.html",
+		"/Users/hugh/web/personal/studyReact/react-test/test3.html",
+		"/Users/hugh/project/20161027/Taizhou-yunying/dm/choujiang/css/style.css",
+		"/Users/hugh/project/20161027/Taizhou-yunying/dm/choujiang/index.html",
+		"/Users/hugh/web/personal/studyReact/react-test/test1.html",
+		"/Users/hugh/Library/Application Support/Sublime Text 3/Packages/Markdown Preview/MarkdownPreview.sublime-settings",
+		"/Users/hugh/web/personal/test-webpack/app/NewsList.css",
+		"/Users/hugh/web/personal/test-webpack/app/NewsList.js",
+		"/Users/hugh/web/personal/test-webpack/app/NewsItem.js",
+		"/Users/hugh/web/personal/test-webpack/app/app.js",
+		"/Users/hugh/web/personal/test-webpack/app/moment.js",
+		"/Users/hugh/project/Taizhou-yunying/dm/choujiang/sharedown.html",
+		"/Users/hugh/project/Taizhou-yunying/dm/choujiang/js/sharedown.js",
+		"/Users/hugh/project/Taizhou-yunying/dm/zjd/js/download.js",
+		"/Users/hugh/project/Taizhou-yunying/dm/zjd/download.html",
+		"/Users/hugh/project/Taizhou-yunying/dm/choujiang/css/sharedown.css",
+		"/Users/hugh/project/Taizhou-yunying/dm/public/modules/template/any_door_tpls.html",
+		"/Users/hugh/project/Taizhou-yunying/dm/zjd/css/style.css",
+		"/Users/hugh/project/Taizhou-yunying/dm/public/modules/template/viewport.html",
+		"/Users/hugh/project/Taizhou-yunying/dm/zjd/awards.html",
+		"/Users/hugh/project/Taizhou-yunying/dm/zjd/js/awards.js",
+		"/Users/hugh/project/Taizhou-yunying/dmstg/zjd/awards.html",
+		"/Users/hugh/web/personal/test-webpack/app/NewsHeader.css",
+		"/Users/hugh/web/personal/test-webpack/app/NewsHeader.js",
+		"/Users/hugh/web/personal/test-webpack/build/bundle.js",
+		"/Users/hugh/project/Taizhou-yunying/dmstg/zjd/css/style.css",
+		"/Users/hugh/project/Taizhou-yunying/dmstg/zjd/js/verificationCode.js",
+		"/Users/hugh/project/Taizhou-yunying/dm/zjd/js/verificationCode.js",
+		"/Users/hugh/project/Taizhou-yunying/node_modules/vinyl/index.js",
+		"/Users/hugh/project/Taizhou-yunying/dm/public/modules/classes/common.js",
+		"/Users/hugh/web/pa-case/Taizhou-yunying/dm/zjd/css/style.css",
+		"/Users/hugh/web/pa-case/Taizhou-yunying/dm/zjd/awards.html",
+		"/Users/hugh/web/pa-case/Taizhou-yunying/dm/zjd/js/awards.js",
+		"/Users/hugh/web/pa-case/Taizhou-yunying/dm/zjd/js/download.js",
+		"/Users/hugh/web/pa-case/Taizhou-yunying/dm/public/config/dmprd.js",
+		"/Users/hugh/web/pa-case/Taizhou-yunying/dm/zjd/js/eggFrenzy.js",
+		"/Users/hugh/web/pa-case/Taizhou-yunying/dm/zjd/js/verificationCode.js",
+		"/Users/hugh/web/pa-case/Taizhou-yunying/dm/zjd/images/egg11.png",
+		"/Users/hugh/web/pa-case/Taizhou-yunying/package.json",
+		"/Users/hugh/Downloads/Taizhou-yunying/dm/zjd/js/awards.js",
+		"/Users/hugh/Downloads/Taizhou-yunying/dm/zjd/js/verificationCode.js",
+		"/Users/hugh/Downloads/Taizhou-yunying/dm/zjd/js/eggFrenzy.js",
+		"/Users/hugh/Downloads/Taizhou-yunying/dm/zjd/js/download.js",
+		"/Users/hugh/web/personal/书本翻页.html/demo.html",
+		"/Users/hugh/Downloads/Taizhou-yunying/dm/zjd/awards.html",
+		"/Users/hugh/Downloads/README 2.md",
+		"/Users/hugh/web/pa-case/YunYing/_dev/core/js/oop.js",
+		"/Users/hugh/web/pa-case/YunYing/node_modules/browser-sync/node_modules/browser-sync-ui/public/css/core.min.css",
+		"/Users/hugh/web/pa-case/YunYing/_dev/modules/lottery-sd/1.0.0/js/lottery.js",
+		"/Users/hugh/web/pa-case/YunYing/_dev/modules/lottery-sd/1.0.0/js/scroll.js",
+		"/Users/hugh/web/pa-case/YunYing/_dev/modules/lottery-sd/1.0.0/js/play.js",
+		"/Users/hugh/web/pa-case/YunYing/src/modules/lottery-sd/1.0.0/css/play.less",
+		"/Users/hugh/web/pa-case/YunYing/_dev/modules/lottery-sd/1.0.0/css/play.css",
+		"/Users/hugh/web/pa-case/YunYing/_dev/modules/lottery-sd/1.0.0/views/play.html",
+		"/Users/hugh/web/personal/适配方案/demo.html",
+		"/Users/hugh/web/pa-case/YunYing/src/modules/lottery-sd/1.0.0/views/play.html",
+		"/Users/hugh/web/pa-case/YunYing/_dev/modules/lottery-sd/1.0.0/css/play.css.map"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"handleZoomByDirection",
+			"window",
+			"X",
+			",\n",
+			"isActivityExp",
+			"图片",
+			"relative",
+			"li",
+			"-->\n",
+			"href",
+			"iframe",
+			"demo-right",
+			"slider-index",
+			"_bindSignClick",
+			"totop",
+			"iframe",
+			"clazz",
+			"env",
+			"0101_活动页_点击_抽奖",
+			"liked",
+			"World",
+			"_",
+			"parentNode",
+			"h2",
+			"example",
+			"div",
+			"javascript",
+			"ImageGrayArrow",
+			"Moment",
+			"moment",
+			"mo",
+			"shareDown",
+			"this",
+			"newcomments",
+			"comments",
+			"newcomments",
+			"comments",
+			"newcomments",
+			"comments",
+			"new",
+			"phoneNumber",
+			"btn_submit",
+			"rotata",
+			"_ancestors",
+			"sass",
+			"actPrizeDTO",
+			"toast-body",
+			"getId",
+			"signDay",
+			"getData",
+			"onEvent",
+			"actions",
+			"行",
+			"CHANNEL_MAP",
+			"input",
+			"request",
+			">.squire",
+			"myScroll",
+			"mobile",
+			"getQSObject",
+			"getBoundingClient",
+			"getBoundingClientRect",
+			"getActivityList",
+			"then(",
+			"setHeader",
+			"rem",
+			"dsn"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 28.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "Github.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"test1",
+				"Github/MyStudy/H5/test1.html"
+			],
+			[
+				"vendor",
+				"web/pa-case/YunYing/_dev/modules/vendor.js"
+			],
+			[
+				"nun",
+				"Gitlab/H5standard/node_modules/nunjucks/browser/nunjucks.js"
+			],
+			[
+				"",
+				"app/NewsItem.css"
+			],
+			[
+				"new",
+				"app/NewsItem.js"
+			],
+			[
+				"news",
+				"app/NewsItem.js"
+			],
+			[
+				"n",
+				"app/NewsHeader.css"
+			],
+			[
+				"newsh",
+				"app/NewsHeader.js"
+			],
+			[
+				"share",
+				"YunYing/_dev/modules/guangzhou-insurance-1610/1.0.0/js/share.js"
+			],
+			[
+				"vinyl/in",
+				"node_modules/vinyl/index.js"
+			],
+			[
+				"core.min",
+				"YunYing/node_modules/browser-sync/node_modules/browser-sync-ui/public/css/core.min.css"
+			],
+			[
+				"play.less",
+				"src/modules/lottery-sd/1.0.0/css/play.less"
+			],
+			[
+				"modules/guangzhou-may/1.0.0/tpl/myprize.tpl",
+				"_stg/modules/guangzhou-may/1.0.0/tpl/myprize.tpl.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Github/MyStudy/Canvas/交互效果/Gitlab.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 283.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
