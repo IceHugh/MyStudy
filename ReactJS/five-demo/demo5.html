@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>demo1</title>
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js">
+    <script src="build/jquery.min.js"></script>
+    <script src="build/react.js"></script>
+    <script src="build/react-dom.js"></script>
+    <script src="build/browser.min.js"></script>
+</head>
+<body>
+    <div id="well"></div>
+    <script type="text/babel">
+    var Text = React.createClass({
+        getInitialState: function(){
+            return {name: 'React'};
+        },
+        keyUp: function(e){
+            this.setState({name: e.target.value});
+        },
+        render: function(){
+            return (
+                <div>大家好，我是{this.state.name}渲染出来的
+                <input type="text" onKeyUp={this.keyUp}/></div>
+            );
+        }
+    });
+    ReactDOM.render(
+        <Text/>,document.getElementById('well')
+    )
+    </script>
+</body>
+</html>

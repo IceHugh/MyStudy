@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>demo1</title>
+    <script src="build/jquery.min.js"></script>
+    <script src="build/react.js"></script>
+    <script src="build/react-dom.js"></script>
+    <script src="build/browser.min.js"></script>
+</head>
+<body>
+    <div id="well"></div>
+    <script type="text/babel">
+    var Text = React.createClass({
+        render: function(){
+            return (
+                <div>我是Reavct渲染出来的</div>
+            );
+        }
+    });
+    ReactDOM.render(
+        <Text/>,document.getElementById('well')
+    )
+    </script>
+</body>
+</html>

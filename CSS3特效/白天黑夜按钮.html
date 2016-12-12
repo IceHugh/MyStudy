@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>白天黑夜按钮</title>
+    <style type="text/css">
+        html,body{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+        label,section,#a{
+            transition: all 1s ease;
+        }
+        input[type="checkbox"]{
+            display: none;
+        }
+        input[type="checkbox"] + label{
+            width: 200px;
+            height: 80px;
+            border-radius: 40px;
+            background: #040d1c;
+            display: block;
+            position: absolute;
+            top: calc(50% - 40px);
+            left: calc(50% - 100px);
+            padding: 10px;
+            box-shadow: 5px 5px 20px rgba(0,0,0,.5) inset;
+            box-sizing: border-box;
+            cursor: pointer;
+            z-index: 5;
+        }
+        input[type="checkbox"] + label + section {
+            width: 100%;
+            height: 100%;
+            background: #0f1f3a;
+            position: absolute;
+        }
+        #a{
+            width: 60px;
+            height: 60px;
+            background: #f0f0f0;
+            border-radius: 50%;
+            box-shadow: 0 0 100px rgba(255,255,255,1);
+        }
+        input[type=checkbox]:checked + label{
+            background: #2a5fba;
+        }
+        input[type=checkbox]:checked + label #a{
+            background: #f4e94e;
+            box-shadow: 0 0 100px rgba(249, 240, 104,1);
+            transform: translate(120px,0);
+        }
+        input[type=checkbox]:checked + label + section{
+            background: #568eef;
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="c">
+    <label for="c">
+        <div id="a"></div>
+    </label>
+    <section></section>
+</body>
+</html>

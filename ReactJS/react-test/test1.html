@@ -5,17 +5,21 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>React-test1</title>
-    <script src="build/react.js"></script>
-    <script src="build/react-dom.js"></script>
-    <script src="build/browser.min.js"></script>
+    <script src="build/jquery.min.js"></script>
 </head>
 
 <body>
-    <div id="content"></div>
-    <script type="text/babel">
-        ReactDOM.render(
-        <h1>Hello World!</h1>, document.getElementById("content")
-        )
+    <script>
+    $(function() {
+        $.post('http://test1-mysyyh-fbtoamc.pingan.com.cn:34100/btoa/portal/storage/queryProductList/', {
+            storageRackId: 'S10100000',
+            pageSize: 100,
+            pageValue: 1,
+            interfaceVersion: 'V2.0.0',
+            apiVersion: 4,
+            winChnlId: ''
+        },function(res){console.log(res);})
+    })
     </script>
 </body>
 
