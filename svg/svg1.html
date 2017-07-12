@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Loading</title>
+    <style>
+        html {
+            height: 100%;
+        }
+        body {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .mouth {
+            animation: mouth 1s infinite;
+        }
+        @keyframes mouth {
+            50% {
+                stroke-dasharray: 50;
+                stroke-dashoffset: 40%;
+            }
+            100% {
+                stroke-dashoffset: 100;
+                stroke-dasharray: 33%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <svg width="100" height="100">
+        <path d="M 20 40 L 80 40 L 80 90 A 10 10 90 0 1 70 100 L 30 100 A 10 10 90 0 1 20 90" fill="#e9e8ee"/>
+        <path d="M 34 40 A 15 15 180 1 1 65 40" stroke-width="5" stroke="#e9e8ee" fill="none"/>
+        <path id="eyeright" d="M 40 60 A 15 15 180 0 1 60 60" fill="none"/>
+        <circle r="2.5" cx="" cy="" fill="#fff">
+            <animateMotion
+                dur="0.8s"
+                repeatCount="indefinite"
+                keyPoints="0;0;0;1"
+                keyTimes="0;0.3;0.9;1"
+                calcModel="linear">
+                <mpath xlink:href="#eyeright"/>
+            </animateMotion>
+        </circle>
+        <circle r="2.5" cx="60" cy="60" fill="#fff"/>
+        <circle r="15" cx="50" cy="70" fill="none" stroke-width="5" stroke="#fff" style="stroke-linecap: round;stroke-dashoffset: 0; stroke-dasharray: 48%; transform-origin: 50% 50%;" class="mouth"/>
+    </svg>
+</body>
+</html>
