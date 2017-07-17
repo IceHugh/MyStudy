@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>模仿知乎首页运动小球效果</title>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+    <canvas id="canvas">
+    </canvas>
+    <script>
+        var w = window.innerWidth,
+            h = window.innerHeight,
+            canvas = document.getElementById('canvas'),
+            ctx = canvas.getContext('2d'),
+            ball = {
+                x: 0,
+                y: 0,
+                vx: 0,
+                vy: 0,
+                color: '#ccc',
+                r: 0,
+            },
+            balls = [];
+        canvas.width = w;
+        canvas.height = h;
+        function getIntRan(s,e) {
+            var d = e - s;
+            return Math.round(Math.random() * d + s).toFixed(2) - 0;
+        }
+        function getFloatRan (s, e) {
+            var d = e - s;
+            var ran = (Math.random() * d + s).toFixed(2) - 0;
+            return ran === 0 ? 0.25 : ran;
+        }
+        function initBalls (num) {
+            for(var i = 0; i < num; i++){
+                ball = {
+                    x: getIntRan(0,w),
+                    y: getIntRan(0,h),
+                    vx: getFloatRan(-1, 1),
+                    vy: getFloatRan(-1, 1),
+                    color: '#ccc',
+                    r: 2
+                }
+                balls.push(ball);
+            }
+            // console.log(balls)
+        }
+        function draw() {
+            ctx.clearRect(0,0,w,h);
+            for(i in balls) {
+                let ball = balls[i];
+                ctx.save();
+                ctx.beginPath();
+                ctx.fillStyle = ball.color;
+                ctx.arc(ball.x, ball.y, ball.r, Math.PI * 2, false);
+                ctx.fill();
+                ctx.closePath();
+                ctx.restore();
+            }
+        }
+        function updateCoord () {
+            for(i in balls) {
+                let ball = balls[i];
+                let r = ball.r;
+                ball.x += ball.vx;
+                ball.y += ball.vy;
+                if(ball.x + r >= w || ball.x - r <=0) {
+                    ball.vx = - ball.vx;
+                }
+                if(ball.y + r >= h|| ball.y - r <= 0) {
+                    ball.vy = - ball.vy;
+                }
+            }
+        }
+        function getDis (x, y ) {
+            return Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2)).toFixed(2) - 0;
+        }
+        function drawLine () {
+            var xd = 0,
+                yd = 0,
+                d = 0;
+            for(i in balls) {
+                for(j in balls) {
+                    xd = balls[j].x - balls[i].x;
+                    yd = balls[j].y - balls[i].y;
+                    d = getDis(xd, yd);
+                    if(d >= 30 && d <= 200){
+                        ctx.save();
+                             ctx.beginPath();
+                             ctx.strokeStyle="#999999";
+                             ctx.lineWidth=0.1;
+                             ctx.moveTo(balls[i].x, balls[i].y);
+                             ctx.lineTo(balls[j].x,balls[j].y);
+                             ctx.closePath();
+                             ctx.stroke();
+                             ctx.restore();
+                    }
+                }
+            }
+        }
+        initBalls(80);
+        function loopMove () {
+            requestAnimationFrame(loopMove);
+            // console.log(123)
+            draw();
+            updateCoord();
+            drawLine();
+        }
+        loopMove();
+        // draw();
+    </script>
+</body>
+</html>
