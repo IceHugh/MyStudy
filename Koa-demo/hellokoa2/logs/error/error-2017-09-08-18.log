@@ -1,0 +1,13 @@
+[2017-09-08 18:22:12.915] [ERROR] errorLogger - *********** error log start ***********
+request method GET
+request originalUrl/api/users/getUser
+request clinet ip::1
+request query{}
+response time7
+err nameTypeError
+err messagereg.text is not a function
+err stackTypeError: reg.text is not a function
+    at /Users/hugh/icehugh-github/MyStudy/Koa-demo/hellokoa2/middlewares/response_formatter.js:20:13
+    at <anonymous>
+*********** error log end ***********
+

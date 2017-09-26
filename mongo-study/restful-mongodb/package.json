@@ -1,0 +1,20 @@
+{
+  "name": "restful-mongodb",
+  "description": "Node.js and MongoDb tutorial.",
+  "version": "1.0.0",
+  "main": "Server.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "Node.js",
+    "mongoDb"
+  ],
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "koa": "^2.3.0",
+    "mongoose": "^4.11.9"
+  }
+}

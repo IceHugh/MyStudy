@@ -1,0 +1,187 @@
+[2017-09-08 17:18:46.562] [INFO] responseLogger - *********** response log start ***********
+request method GET
+request originalUrl/
+request clinet ip::1
+request query{}
+response time295
+response status200
+response body
+"<!DOCTYPE html><html><head><title>Hello Koa 2!</title><link rel=\"stylesheet\" href=\"/stylesheets/style.css\"></head><body><h1>Hello Koa 2!</h1><p>Welcome to Hello Koa 2!</p></body></html>"
+*********** response log end ***********
+
+[2017-09-08 17:18:46.585] [INFO] responseLogger - *********** response log start ***********
+request method GET
+request originalUrl/stylesheets/style.css
+request clinet ip::1
+request query{}
+response time3
+response status200
+response body
+{"_readableState":{"objectMode":false,"highWaterMark":65536,"buffer":{"head":null,"tail":null,"length":0},"length":0,"pipes":null,"pipesCount":0,"flowing":null,"ended":false,"endEmitted":false,"reading":false,"sync":true,"needReadable":false,"emittedReadable":false,"readableListening":false,"resumeScheduled":false,"destroyed":false,"defaultEncoding":"utf8","awaitDrain":0,"readingMore":false,"decoder":null,"encoding":null},"readable":true,"domain":null,"_events":{},"_eventsCount":2,"path":"/Users/hugh/icehugh-github/MyStudy/Koa-demo/hellokoa2/public/stylesheets/style.css","fd":null,"flags":"r","mode":438,"autoClose":true,"bytesRead":0}
+*********** response log end ***********
+
+[2017-09-08 17:43:21.446] [INFO] responseLogger - *********** response log start ***********
+request method GET
+request originalUrl/
+request clinet ip::1
+request query{}
+response time284
+response status200
+response body
+"<!DOCTYPE html><html><head><title>Hello Koa 2!</title><link rel=\"stylesheet\" href=\"/stylesheets/style.css\"></head><body><h1>Hello Koa 2!</h1><p>Welcome to Hello Koa 2!</p></body></html>"
+*********** response log end ***********
+
+[2017-09-08 17:45:00.385] [INFO] responseLogger - *********** response log start ***********
+request method GET
+request originalUrl/
+request clinet ip::1
+request query{}
+response time269
+response status200
+response body
+"<!DOCTYPE html><html><head><title>Hello Koa 2!</title><link rel=\"stylesheet\" href=\"/stylesheets/style.css\"></head><body><h1>Hello Koa 2!</h1><p>Welcome to Hello Koa 2!</p></body></html>"
+*********** response log end ***********
+
+[2017-09-08 17:45:21.946] [INFO] responseLogger - *********** response log start ***********
+request method GET
+request originalUrl/api/users/getUser
+request clinet ip::1
+request query{}
+response time2
+response status404
+response body
+undefined
+*********** response log end ***********
+
+[2017-09-08 17:46:15.980] [INFO] responseLogger - *********** response log start ***********
+request method GET
+request originalUrl/api/
+request clinet ip::1
+request query{}
+response time4
+response status404
+response body
+undefined
+*********** response log end ***********
+
+[2017-09-08 17:47:30.000] [INFO] responseLogger - *********** response log start ***********
+request method GET
+request originalUrl/api/users/regiestUser
+request clinet ip::1
+request query{}
+response time1
+response status404
+response body
+undefined
+*********** response log end ***********
+
+[2017-09-08 17:48:01.251] [INFO] responseLogger - *********** response log start ***********
+request method GET
+request originalUrl/api/users/getUser
+request clinet ip::1
+request query{}
+response time3
+response status404
+response body
+undefined
+*********** response log end ***********
+
+[2017-09-08 17:48:01.698] [INFO] responseLogger - *********** response log start ***********
+request method GET
+request originalUrl/favicon.ico
+request clinet ip::1
+request query{}
+response time2
+response status404
+response body
+undefined
+*********** response log end ***********
+
+[2017-09-08 17:49:33.526] [INFO] responseLogger - *********** response log start ***********
+request method GET
+request originalUrl/
+request clinet ip::1
+request query{}
+response time38
+response status200
+response body
+"<!DOCTYPE html><html><head><title>Hello Koa 2!</title><link rel=\"stylesheet\" href=\"/stylesheets/style.css\"></head><body><h1>Hello Koa 2!</h1><p>Welcome to Hello Koa 2!</p></body></html>"
+*********** response log end ***********
+
+[2017-09-08 17:49:33.546] [INFO] responseLogger - *********** response log start ***********
+request method GET
+request originalUrl/stylesheets/style.css
+request clinet ip::1
+request query{}
+response time4
+response status200
+response body
+{"_readableState":{"objectMode":false,"highWaterMark":65536,"buffer":{"head":null,"tail":null,"length":0},"length":0,"pipes":null,"pipesCount":0,"flowing":null,"ended":false,"endEmitted":false,"reading":false,"sync":true,"needReadable":false,"emittedReadable":false,"readableListening":false,"resumeScheduled":false,"destroyed":false,"defaultEncoding":"utf8","awaitDrain":0,"readingMore":false,"decoder":null,"encoding":null},"readable":true,"domain":null,"_events":{},"_eventsCount":2,"path":"/Users/hugh/icehugh-github/MyStudy/Koa-demo/hellokoa2/public/stylesheets/style.css","fd":null,"flags":"r","mode":438,"autoClose":true,"bytesRead":0}
+*********** response log end ***********
+
+[2017-09-08 17:50:33.048] [INFO] responseLogger - *********** response log start ***********
+request method GET
+request originalUrl/
+request clinet ip::1
+request query{}
+response time296
+response status200
+response body
+"<!DOCTYPE html><html><head><title>Hello Koa 2!</title><link rel=\"stylesheet\" href=\"/stylesheets/style.css\"></head><body><h1>Hello Koa 2!</h1><p>Welcome to Hello Koa 2!</p></body></html>"
+*********** response log end ***********
+
+[2017-09-08 17:50:33.085] [INFO] responseLogger - *********** response log start ***********
+request method GET
+request originalUrl/stylesheets/style.css
+request clinet ip::1
+request query{}
+response time13
+response status200
+response body
+{"_readableState":{"objectMode":false,"highWaterMark":65536,"buffer":{"head":null,"tail":null,"length":0},"length":0,"pipes":null,"pipesCount":0,"flowing":null,"ended":false,"endEmitted":false,"reading":false,"sync":true,"needReadable":false,"emittedReadable":false,"readableListening":false,"resumeScheduled":false,"destroyed":false,"defaultEncoding":"utf8","awaitDrain":0,"readingMore":false,"decoder":null,"encoding":null},"readable":true,"domain":null,"_events":{},"_eventsCount":2,"path":"/Users/hugh/icehugh-github/MyStudy/Koa-demo/hellokoa2/public/stylesheets/style.css","fd":null,"flags":"r","mode":438,"autoClose":true,"bytesRead":0}
+*********** response log end ***********
+
+[2017-09-08 17:54:14.422] [INFO] responseLogger - *********** response log start ***********
+request method GET
+request originalUrl/bar
+request clinet ip::1
+request query{}
+response time10
+response status404
+response body
+undefined
+*********** response log end ***********
+
+[2017-09-08 17:54:37.788] [INFO] responseLogger - *********** response log start ***********
+request method GET
+request originalUrl/users/bar
+request clinet ip::1
+request query{}
+response time4
+response status200
+response body
+"this is a users/bar response"
+*********** response log end ***********
+
+[2017-09-08 17:55:02.313] [INFO] responseLogger - *********** response log start ***********
+request method GET
+request originalUrl/api/users/getUser
+request clinet ip::1
+request query{}
+response time11
+response status404
+response body
+undefined
+*********** response log end ***********
+
+[2017-09-08 17:59:30.473] [INFO] responseLogger - *********** response log start ***********
+request method GET
+request originalUrl/api/users/getUser
+request clinet ip::1
+request query{}
+response time4
+response status404
+response body
+undefined
+*********** response log end ***********
+

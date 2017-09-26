@@ -1,0 +1,55 @@
+[2017-09-08 18:00:34.245] [INFO] responseLogger - *********** response log start ***********
+request method GET
+request originalUrl/api/users/getUser
+request clinet ip::1
+request query{}
+response time8
+response status200
+response body
+{"username":"ice","age":27}
+*********** response log end ***********
+
+[2017-09-08 18:13:20.296] [INFO] responseLogger - *********** response log start ***********
+request method GET
+request originalUrl/api/users/getUser
+request clinet ip::1
+request query{}
+response time6
+response status200
+response body
+{"username":"ice","age":27}
+*********** response log end ***********
+
+[2017-09-08 18:14:55.684] [INFO] responseLogger - *********** response log start ***********
+request method GET
+request originalUrl/api/users/getUser
+request clinet ip::1
+request query{}
+response time6
+response status200
+response body
+{"code":0,"message":"success","data":{"username":"ice","age":27}}
+*********** response log end ***********
+
+[2017-09-08 18:20:49.313] [INFO] responseLogger - *********** response log start ***********
+request method GET
+request originalUrl/api/users/getUser
+request clinet ip::1
+request query{}
+response time6
+response status200
+response body
+{"code":0,"message":"success"}
+*********** response log end ***********
+
+[2017-09-08 18:22:42.930] [INFO] responseLogger - *********** response log start ***********
+request method GET
+request originalUrl/api/users/getUser
+request clinet ip::1
+request query{}
+response time9
+response status200
+response body
+{"code":0,"message":"success","data":{"username":"ice","age":27}}
+*********** response log end ***********
+

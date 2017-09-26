@@ -1,0 +1,66 @@
+[2017-09-08 17:15:36.615] [INFO] resLogger - *********** response log start ***********
+request method GET
+request originalUrl/
+request clinet ip::1
+request query{}
+response time335
+response status200
+response body
+"<!DOCTYPE html><html><head><title>Hello Koa 2!</title><link rel=\"stylesheet\" href=\"/stylesheets/style.css\"></head><body><h1>Hello Koa 2!</h1><p>Welcome to Hello Koa 2!</p></body></html>"
+*********** response log end ***********
+
+[2017-09-08 17:15:36.643] [INFO] resLogger - *********** response log start ***********
+request method GET
+request originalUrl/stylesheets/style.css
+request clinet ip::1
+request query{}
+response time4
+response status200
+response body
+{"_readableState":{"objectMode":false,"highWaterMark":65536,"buffer":{"head":null,"tail":null,"length":0},"length":0,"pipes":null,"pipesCount":0,"flowing":null,"ended":false,"endEmitted":false,"reading":false,"sync":true,"needReadable":false,"emittedReadable":false,"readableListening":false,"resumeScheduled":false,"destroyed":false,"defaultEncoding":"utf8","awaitDrain":0,"readingMore":false,"decoder":null,"encoding":null},"readable":true,"domain":null,"_events":{},"_eventsCount":2,"path":"/Users/hugh/icehugh-github/MyStudy/Koa-demo/hellokoa2/public/stylesheets/style.css","fd":null,"flags":"r","mode":438,"autoClose":true,"bytesRead":0}
+*********** response log end ***********
+
+[2017-09-08 17:15:37.872] [INFO] resLogger - *********** response log start ***********
+request method GET
+request originalUrl/
+request clinet ip::1
+request query{}
+response time31
+response status200
+response body
+"<!DOCTYPE html><html><head><title>Hello Koa 2!</title><link rel=\"stylesheet\" href=\"/stylesheets/style.css\"></head><body><h1>Hello Koa 2!</h1><p>Welcome to Hello Koa 2!</p></body></html>"
+*********** response log end ***********
+
+[2017-09-08 17:15:37.886] [INFO] resLogger - *********** response log start ***********
+request method GET
+request originalUrl/stylesheets/style.css
+request clinet ip::1
+request query{}
+response time1
+response status200
+response body
+{"_readableState":{"objectMode":false,"highWaterMark":65536,"buffer":{"head":null,"tail":null,"length":0},"length":0,"pipes":null,"pipesCount":0,"flowing":null,"ended":false,"endEmitted":false,"reading":false,"sync":true,"needReadable":false,"emittedReadable":false,"readableListening":false,"resumeScheduled":false,"destroyed":false,"defaultEncoding":"utf8","awaitDrain":0,"readingMore":false,"decoder":null,"encoding":null},"readable":true,"domain":null,"_events":{},"_eventsCount":2,"path":"/Users/hugh/icehugh-github/MyStudy/Koa-demo/hellokoa2/public/stylesheets/style.css","fd":null,"flags":"r","mode":438,"autoClose":true,"bytesRead":0}
+*********** response log end ***********
+
+[2017-09-08 17:17:16.086] [INFO] resLogger - *********** response log start ***********
+request method GET
+request originalUrl/
+request clinet ip::1
+request query{}
+response time291
+response status200
+response body
+"<!DOCTYPE html><html><head><title>Hello Koa 2!</title><link rel=\"stylesheet\" href=\"/stylesheets/style.css\"></head><body><h1>Hello Koa 2!</h1><p>Welcome to Hello Koa 2!</p></body></html>"
+*********** response log end ***********
+
+[2017-09-08 17:17:16.117] [INFO] resLogger - *********** response log start ***********
+request method GET
+request originalUrl/stylesheets/style.css
+request clinet ip::1
+request query{}
+response time10
+response status200
+response body
+{"_readableState":{"objectMode":false,"highWaterMark":65536,"buffer":{"head":null,"tail":null,"length":0},"length":0,"pipes":null,"pipesCount":0,"flowing":null,"ended":false,"endEmitted":false,"reading":false,"sync":true,"needReadable":false,"emittedReadable":false,"readableListening":false,"resumeScheduled":false,"destroyed":false,"defaultEncoding":"utf8","awaitDrain":0,"readingMore":false,"decoder":null,"encoding":null},"readable":true,"domain":null,"_events":{},"_eventsCount":2,"path":"/Users/hugh/icehugh-github/MyStudy/Koa-demo/hellokoa2/public/stylesheets/style.css","fd":null,"flags":"r","mode":438,"autoClose":true,"bytesRead":0}
+*********** response log end ***********
+
