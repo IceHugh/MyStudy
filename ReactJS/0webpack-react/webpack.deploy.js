@@ -5,7 +5,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const StatsPlugin = require('stats-webpack-plugin');
 const env = process.env.NODE_ENV === 'product' ? 'product' : 'test';
 const publicPaths = {
-  text: '',
+  test: '',
   production: '/'
 }
 
