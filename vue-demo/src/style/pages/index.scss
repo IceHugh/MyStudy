@@ -1,0 +1,14 @@
+@import '../base/index.scss';
+.page {
+  @include _flex(flex-start, center, column);
+}
+.process-card {
+  flex: auto;
+  overflow-y: auto;
+  padding: rem750(20) 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+.process-card::webkit-scrollbar {
+  display: none;
+}

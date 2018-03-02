@@ -1,0 +1,33 @@
+/**
+ * @author IceHugh
+ * @email 14835187@qq.com
+ * @create date 2017-09-13 02:50:10
+ * @modify date 2017-09-13 02:50:10
+ * @desc [scss mixin]
+*/
+@mixin _flex($x, $y, $d: row) {
+  display: flex;
+  justify-content: $x;
+  align-items: $y;
+  flex-direction: $d;
+}
+
+@mixin _absolute-t-f($top, $left) {
+  position: absolute;
+  top: $top;
+  left: $left;
+}
+@mixin _absolute-t-r($top, $right) {
+  position: absolute;
+  top: $top;
+  right: $right;
+}
+
+@mixin _fixed_center($top: 0, $right: 0, $bottom: 0, $left: 0) {
+  position: fixed;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+

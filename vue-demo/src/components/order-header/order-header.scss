@@ -1,0 +1,32 @@
+@import '../../style/base/index.scss';
+.container {
+  box-sizing: border-box;
+  padding: 0 rem750(60);
+  background: $bg-1;
+  box-shadow: 0 rem750(3) rem750(20) $bg-black;
+  color: $text-base;
+  min-height: rem750(200);
+  width: 100%;
+  position: relative;
+  z-index: 99;
+}
+.container__top {
+  @include _flex(start, center);
+  font-size: $font-32;
+}
+.container__bottom {
+  font-size: $font-20;
+}
+.user__avatar {
+  width: rem750(80);
+  height: rem750(80);
+  border: rem750(6) solid #fff;
+  border-radius: 50%;
+  margin-right: rem750(40);
+}
+.pickinfo {
+  margin-top: rem750(22);
+}
+.pickinfo-color {
+  color: $text-1;
+}

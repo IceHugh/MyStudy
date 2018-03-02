@@ -1,0 +1,12 @@
+/**
+ * @author IceHugh
+ * @email 14835187@qq.com
+ * @create date 2017-09-13 02:53:13
+ * @modify date 2017-09-13 02:53:13
+ * @desc scss function
+*/
+
+@function rem750($val) {
+  @return $val/75 * 1rem;
+}
+

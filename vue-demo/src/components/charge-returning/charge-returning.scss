@@ -1,0 +1,20 @@
+@import '../../style/base/index.scss';
+.card {
+  @include _flex(start, start);
+}
+.card__left {
+  padding-top: rem750(26);
+  flex: rem750(480);
+}
+.card__right {
+  height: 100%;
+  @include _flex(flex-end, center);
+}
+.card__location, .card__time {
+  width: 100%;
+  word-wrap: break-word;
+  font-size: $font-34;
+  font-weight: bold;
+  text-indent: rem750(34);
+  margin-top: rem750(15);
+}

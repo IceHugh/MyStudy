@@ -1,0 +1,20 @@
+@import '../../style/base/index.scss';
+.container {
+  box-sizing: border-box;
+  color: $text-base;
+  min-height: rem750(140);
+  width: 100%;
+  @include _flex(center,center);
+}
+.footer__btn{
+  width: rem750(654);
+  background: $bg-d8;
+  border-radius: rem750(20);
+  height: rem750(80);
+  font-size: $font-36;
+  color: rgba(0,0,0,.3);
+}
+.footer__btn--true {
+  background: linear-gradient(to right, #ff9c2e, #ff6782);
+  color: $text-f4;
+}

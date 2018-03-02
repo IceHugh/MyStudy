@@ -1,0 +1,15 @@
+@import '../../style/base/index.scss';
+
+.header {
+  position: relative;
+  min-height: rem750(60);
+  background: $bg-1;
+  width: 100%;
+  position: relative;
+  z-index: 100;
+}
+.header__back {
+  @include _absolute_t_f(0,0);
+  height: 100%;
+  width: rem750(60);
+}

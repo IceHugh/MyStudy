@@ -1,0 +1,12 @@
+@import '../../style/base/index.scss';
+.btn {
+  padding: rem750(8) rem750(16);
+  border: rem750(1) solid $text-base;
+  border-radius: rem750(20);
+  font-size: $font-30;
+  background: transparent;
+  color: $text-base;
+}
+.btn:hover {
+  background: rgba(255,255,255, .2);
+}

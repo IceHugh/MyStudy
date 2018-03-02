@@ -1,0 +1,55 @@
+@import '../base/index.scss';
+.head-info {
+  margin-top: rem750(144);
+  margin-bottom: rem750(78);
+  text-align: center;
+  color: #f4f4f4;
+  font-size: rem750(40);
+}
+
+.input-box{
+  @include _flex(start, center);
+  width: rem750(654);
+  height: rem750(92);
+  margin: 0 auto;
+  border-radius: rem750(20);
+  margin-bottom: rem750(52);
+  position: relative;
+  background: #fff;
+}
+.icon-box {
+  @include _flex(center, center);
+  width: rem750(100);
+  height: 100%;
+  border-right: 1px solid #d9d9d9;
+  margin-right: rem750(14);
+}
+.input-icon{
+  width: rem750(32);
+  height: rem750(50);
+}
+.input-icon-lock{
+  width: rem750(36);
+  height: rem750(46);
+}
+.del-icon{
+  margin-left: rem750(144);
+}
+.input-fill{
+  height: rem750(90);
+  width: rem750(400);
+  font-size: rem750(28);
+}
+
+.btn-large {
+  display: block;
+  margin: 0 auto;
+  width: rem750(654);
+  height: rem750(92);
+  line-height: rem750(92);
+  border-radius: rem750(20);
+  background: linear-gradient(to right, #ff9c2e, #ff6782);
+  color: #f4f4f4;
+  font-size: rem750(36);
+  text-align: center;
+}

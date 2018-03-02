@@ -1,0 +1,80 @@
+/**
+ * @author IceHugh
+ * @email 14835187@qq.com
+ * @create date 2017-09-13 02:53:31
+ * @modify date 2017-09-13 02:53:31
+ * @desc 页面统一布局和样式
+*/
+
+@import './index.scss';
+html, body,#app,.page {
+  height: 100%;
+}
+html {
+  background: linear-gradient(to bottom, $bg-1, $bg-2);
+  overflow: hidden;
+}
+.text-1 {
+  color: $text-1;
+}
+.font-30 {
+  font-size: $font-30;
+}
+
+.page {
+  color: $text-base;
+}
+.flex-center {
+  @include _flex(center, center);
+}
+.flex-space {
+  @include _flex(space-between, center);
+}
+
+.card {
+  position: relative;
+  border-radius: rem750(6);
+  margin: 0 auto rem750(22);
+  width: rem750(710);
+  height: rem750(202);
+  background: linear-gradient(to right, $bg-1, $bg-2);
+  box-shadow: 0 0 rem750(12) 1px $bg-black;
+  padding: 0 rem750(40) 0 rem750(30);
+  box-sizing: border-box;
+}
+.card--title {
+  font-size: $font-30;
+}
+.card__iocn--complete {
+  width: rem750(44);
+  height: rem750(44);
+}
+
+// 页面切换动画
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .4s
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active in below version 2.1.8 */ {
+  opacity: 0
+}
+.fade-enter-to, .fade-leave {
+  opacity: 1;
+}
+
+.bounce-enter-active {
+  animation: bounce-in .5s;
+}
+.bounce-leave-active {
+  animation: bounce-in .5s reverse;
+}
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

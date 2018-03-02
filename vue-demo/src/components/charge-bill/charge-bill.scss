@@ -1,0 +1,44 @@
+@import '../../style/base/index.scss';
+.card {
+  min-height: rem750(202);
+  height: auto;
+}
+.card__top{
+  @include _flex(center,flex-start);
+  position: relative;
+}
+.card__left, .card__right {
+  padding-top: rem750(30);
+  flex: 50%;
+}
+.card__middle {
+  width: 1px;
+  height: rem750(100);
+  background: $bg-base;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%) scaleX(.5);
+}
+.card__right {
+  padding-left: rem750(30);
+  box-sizing: border-box;
+}
+.card--hint {
+  font-size: $font-20;
+  text-align: center;
+  height: rem750(20);
+}
+.card__box--btn {
+  height: rem750(100);
+  font-size: $font-30;
+  @include _flex(center,center);
+}
+
+.total__box {
+  height: rem750(80);
+  font-size: $font-40;
+}
+.text-1 {
+  margin: 0 rem750(20);
+}

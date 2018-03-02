@@ -1,0 +1,29 @@
+@import '../base/index.scss';
+.page {
+  @include _flex(flex-start, center, column);
+}
+.fill__container {
+  flex: auto;
+  width: 100%;
+  @include _flex(flex-start, center, column);
+}
+.fill__upload--box {
+  overflow-y: auto;
+  flex: auto;
+  width: 100%;
+}
+.input__box{
+  width: rem750(556);
+  @include _flex(space-between, center);
+  margin: 0 auto rem750(24);
+  font-size: $font-36;
+}
+.input__fill {
+  color: $text-b2;
+}
+.input__detail {
+  width: rem750(120);
+  border-bottom: 1px solid $bd-b2;
+  color: $text-b2;
+  text-align: center;
+}

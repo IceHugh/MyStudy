@@ -1,0 +1,23 @@
+@import '../../style/base/index.scss';
+.card {
+  @include _flex(start, start);
+  height: rem750(140);
+}
+.card__left {
+  flex: rem750(480);
+  height: 100%;
+  @include _flex(flex-start, center);
+}
+.card__right {
+  height: 100%;
+  @include _flex(flex-end, center);
+}
+.card__title {
+  font-size: $font-30;
+}
+.card--hint {
+  font-size: $font-20;
+  height: rem750(20);
+  margin-top: rem750(12);
+}
+

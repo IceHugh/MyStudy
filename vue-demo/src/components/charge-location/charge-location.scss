@@ -1,0 +1,31 @@
+@import '../../style/base/index.scss';
+.card {
+  @include _flex(start, start);
+}
+.card__left {
+  padding-top: rem750(26);
+  flex: rem750(504);
+}
+.card__right {
+  height: 100%;
+  @include _flex(flex-end, center);
+}
+.card--hint {
+  font-size: $font-20;
+  height: rem750(20);
+  margin-top: rem750(12);
+}
+.input-charge-location{
+  margin-top: rem750(20);
+	border-bottom: rem750(1) solid $bg-4;
+	width: rem750(500);
+  font-size: $font-24;
+  line-height: 1.8;
+  color: $text-base;
+}
+.charge-location {
+  width: rem750(500);
+  line-height: 1.8;
+  margin-top: rem750(20);
+  word-wrap: break-word;
+}
